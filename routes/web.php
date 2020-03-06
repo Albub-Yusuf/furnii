@@ -20,6 +20,19 @@ Route::get('/', function () {
 Route::get('admin/login','AdminLoginController@loginForm')->name('admin.login.form');
 Route::post('admin/login','AdminLoginController@login')->name('login');
 
-Route::get('dashboard','DashboardController@index')->name('admin.dashboard');
+Route::middleware('auth')->group(function(){
+
+    Route::get('dashboard','DashboardController@index')->name('admin.dashboard');
+
+});
+
+
+
+
+
+Route::get('logout',function(){
+    auth()->logout();
+    return redirect()->route('admin.login.form');
+})->name('logout');
 
 

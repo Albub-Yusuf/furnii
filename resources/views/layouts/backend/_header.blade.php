@@ -1,3 +1,14 @@
+@php
+
+    $user = auth()->user();
+    if($user->file == NULL){
+              $image = 'Backend/assets/img/user/placeholder.png';
+                            }else{
+                                $image = $user->file;
+                          }
+
+
+@endphp
 <nav class="navbar navbar-static-top navbar-expand-lg">
     <!-- Sidebar toggle button -->
     <button id="sidebar-toggler" class="sidebar-toggle">
@@ -73,15 +84,15 @@
             <!-- User Account -->
             <li class="dropdown user-menu">
                 <button href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                    <img src="{{asset('Backend/assets/img/user/placeholder.png')}}" class="user-image" alt="User Image" />
-                    <span class="d-none d-lg-inline-block">Admin</span>
+                    <img src="{{asset($image)}}" class="user-image" alt="User Image" />
+                    <span class="d-none d-lg-inline-block">{{$user->name}}</span>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-right">
                     <!-- User image -->
                     <li class="dropdown-header">
-                        <img src="{{asset('Backend/assets/img/user/placeholder.png')}}" class="img-circle" alt="User Image" />
+                        <img src="{{asset($image)}}" class="img-circle" alt="User Image" />
                         <div class="d-inline-block">
-                            Admin <small class="pt-1">admin@mail.com</small>
+                            {{$user->name}} <small class="pt-1">{{$user->email}}</small>
                         </div>
                     </li>
 
@@ -103,7 +114,7 @@
                     </li>
 
                     <li class="dropdown-footer">
-                        <a href="signin.html"> <i class="mdi mdi-logout"></i> Log Out </a>
+                        <a href="{{route('logout')}}"> <i class="mdi mdi-logout"></i> Log Out </a>
                     </li>
                 </ul>
             </li>
