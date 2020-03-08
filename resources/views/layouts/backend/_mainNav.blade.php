@@ -35,12 +35,12 @@
 
 
                             <li >
-                                <a class="sidenav-item-link" href="#">
+                                <a class="sidenav-item-link" href="{{route('user.index')}}">
                                     <span class="nav-text">Admin List</span>
                                 </a>
                             </li>
                             <li >
-                                <a class="sidenav-item-link" href="#">
+                                <a class="sidenav-item-link" href="{{route('user.create')}}">
                                     <span class="nav-text">Create Admin</span>
                                 </a>
                             </li>
