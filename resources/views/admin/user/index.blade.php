@@ -37,7 +37,7 @@
                             <td >
                                 <div class="media">
                                     <div class="col-md-1">
-
+                                        {{$serial++}}
                                     </div>
 
                                     <div class="media-image mr-3 rounded-circle">
@@ -93,9 +93,15 @@
 
 
 
+
         </div>
 
+    </div>
+    <div class="row" style="margin: 0  auto;">
 
+        <div class="pagination border-separted ">
+            {{$users->render()}}
+        </div>
     </div>
 
 @endsection
