@@ -25,6 +25,8 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{asset('loginform/css/util.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('loginform/css/main.css')}}">
+    <!--toastr CSS-->
+    <link rel="stylesheet" href="{{asset('Backend/assets/css/toastr.min.css')}}">
     <!--===============================================================================================-->
 </head>
 <body>
@@ -70,6 +72,7 @@
 
                     <a class="txt2" href="#">
                         Sign Up
+
                     </a>
                 </div>
             </form>
@@ -96,6 +99,16 @@
 <script src="{{asset('loginform/vendor/countdowntime/countdowntime.js')}}"></script>
 <!--===============================================================================================-->
 <script src="{{asset('loginform/js/main.js')}}"></script>
+
+<script src="{{asset('Backend/assets/js/toastr.min.js')}}"></script>
+
+<script>
+
+    @if(\Illuminate\Support\Facades\Session::has('error'))
+    toastr.error("{{\Illuminate\Support\Facades\Session::get('error')}}")
+    @endif
+
+</script>
 
 </body>
 </html>

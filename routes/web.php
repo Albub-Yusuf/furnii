@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +35,7 @@ Route::middleware('auth')->group(function(){
 
 Route::get('logout',function(){
     auth()->logout();
+    Session::flash('error','Logged Out Successfully!');
     return redirect()->route('admin.login.form');
 })->name('logout');
 

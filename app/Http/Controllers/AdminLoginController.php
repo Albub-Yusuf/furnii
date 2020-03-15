@@ -29,7 +29,7 @@ class AdminLoginController extends Controller
         if (Auth::attempt($credentials)) {
 
             echo "working";
-            Session::flash('success','Logged In Successfully');
+            Session::flash('info','Logged In Successfully');
             return redirect()->intended('dashboard');
 
         }

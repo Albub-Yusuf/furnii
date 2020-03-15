@@ -86,10 +86,20 @@
 @include('layouts.backend._scripts')
 
 <script>
+
+    @if(\Illuminate\Support\Facades\Session::has('info'))
+        toastr.info("{{\Illuminate\Support\Facades\Session::get('info')}}")
+    @endif
     @if(\Illuminate\Support\Facades\Session::has('success'))
+    //toastr.info("{{\Illuminate\Support\Facades\Session::get('info')}}")
     toastr.success("{{\Illuminate\Support\Facades\Session::get('success')}}")
     //toastr.error("{{\Illuminate\Support\Facades\Session::get('success')}}")
     @endif
+
+    @if(\Illuminate\Support\Facades\Session::has('error'))
+    toastr.error("{{\Illuminate\Support\Facades\Session::get('error')}}")
+    @endif
+
 </script>
 
 
