@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Session;
 
 
 class UserController extends Controller
@@ -64,6 +65,7 @@ class UserController extends Controller
         }
         User::create($user);
         //  session()->flash('message','Admin Created Successfully');
+        Session::flash('success','Admin Created Successfully!');
         return redirect()->route('user.index');
     }
 

@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Contracts\Session\Session;
+//use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class AdminLoginController extends Controller
 {
@@ -28,6 +29,7 @@ class AdminLoginController extends Controller
         if (Auth::attempt($credentials)) {
 
             echo "working";
+            Session::flash('success','Logged In Successfully');
             return redirect()->intended('dashboard');
 
         }
@@ -35,6 +37,7 @@ class AdminLoginController extends Controller
             echo "not working";
         }
         //Session::flash('message');
+
         return redirect()->back()->withInput(['email'=>$request->email]);
 
 

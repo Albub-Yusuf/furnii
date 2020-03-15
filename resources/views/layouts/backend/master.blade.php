@@ -23,7 +23,8 @@
 
     <!-- SLEEK CSS -->
     <link id="sleek-css" rel="stylesheet" href="{{ asset('Backend/assets/css/sleek.css')}}" />
-
+    <!--toastr CSS-->
+    <link rel="stylesheet" href="{{asset('Backend/assets/css/toastr.min.css')}}">
 
 
     <!-- FAVICON -->
@@ -46,6 +47,8 @@
     NProgress.configure({ showSpinner: false });
     NProgress.start();
 </script>
+<script src="{{asset('Backend/assets/js/toastr.min.js')}}"></script>
+
 
 <div class="mobile-sticky-body-overlay"></div>
 
@@ -82,7 +85,12 @@
 
 @include('layouts.backend._scripts')
 
-
+<script>
+    @if(\Illuminate\Support\Facades\Session::has('success'))
+    toastr.success("{{\Illuminate\Support\Facades\Session::get('success')}}")
+    //toastr.error("{{\Illuminate\Support\Facades\Session::get('success')}}")
+    @endif
+</script>
 
 
 </body>

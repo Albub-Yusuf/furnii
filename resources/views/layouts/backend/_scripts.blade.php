@@ -18,3 +18,4 @@
 <script src="{{asset('Backend/assets/js/date-range.js')}}"></script>
 <script src="{{asset('Backend/assets/js/map.js')}}"></script>
 <script src="{{asset('Backend/assets/js/custom.js')}}"></script>
+<script src="{{asset('Backend/assets/js/toastr.min.js')}}"></script>
