@@ -37,7 +37,7 @@ class AdminLoginController extends Controller
             echo "not working";
         }
         //Session::flash('message');
-
+        Session::flash('error','invalid email or password');
         return redirect()->back()->withInput(['email'=>$request->email]);
 
 
