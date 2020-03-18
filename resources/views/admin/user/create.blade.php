@@ -16,8 +16,8 @@
                             <label>Select Admin Type</label>
                             <select name="adminType" class="form-control" id="adminType">
                                 <option value="">Choose Admin Type</option>
-                                <option value="admin">Admin</option>
-                                <option value="manager">Manager</option>
+                                <option value="admin">Super Admin</option>
+                                <option value="manager">Admin</option>
                             </select>
                         </div>
 
@@ -30,17 +30,17 @@
                             </div>
                             <input type="text" name="name" class="form-control" placeholder="Enter Admin's Name Here" aria-label="name">
                         </div>
-
-                        <label class="text-dark mt-4 font-weight-medium" for="">Phone</label>
-                        <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-													<span class="input-group-text">
-														<i class="mdi mdi-phone"></i>
-													</span>
-                            </div>
-                            <input type="text" name="phone" class="form-control"  placeholder="Enter Phone Number" aria-label="phone">
-                        </div>
-
+                        <!--
+                                        <label class="text-dark mt-4 font-weight-medium" for="">Phone</label>
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                                                    <span class="input-group-text">
+                                                                        <i class="mdi mdi-phone"></i>
+                                                                    </span>
+                                            </div>
+                                            <input type="text" name="phone" class="form-control"  placeholder="Enter Phone Number" aria-label="phone">
+                                        </div>
+                    -->
                         <label class="text-dark font-weight-medium" for="">Email</label>
                         <div class="input-group mb-2">
                             <div class="input-group-prepend">

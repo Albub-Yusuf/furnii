@@ -19,7 +19,7 @@ class UserController extends Controller
         $data['title']='Admin List';
         $user = new User();
         $user = $user->withTrashed();
-        $user = $user->orderBy('id','DESC')->paginate(2);
+        $user = $user->orderBy('id','DESC')->paginate(10);
         $data['users'] = $user;
         $data['serial'] = managePagination($user);
 
@@ -48,7 +48,6 @@ class UserController extends Controller
         $request->validate([
             'adminType'=> 'required',
             'name' => 'required',
-            'phone' => 'required',
             'email' => 'required',
             'password' =>'required',
             'status' => 'required'

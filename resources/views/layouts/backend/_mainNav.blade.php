@@ -15,7 +15,7 @@
 
 
                 <li  class="has-sub active expand" >
-                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="" data-target="#dashboard"
+                    <a class="sidenav-item-link" href="{{route('admin.dashboard')}}" data-toggle="" data-target="#dashboard"
                        aria-expanded="false" aria-controls="dashboard">
                         <i class="mdi mdi-view-dashboard-outline"></i>
                         <span class="nav-text">Dashboard</span> <b class=""></b>
