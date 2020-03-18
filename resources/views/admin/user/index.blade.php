@@ -24,7 +24,7 @@
             <table class="table table-stripped table-responsive ">
                 <tbody>
                 @foreach($users as $user)
-                    @if(($user->type == 'admin') || ($user->type == 'manager') )
+
                         @php
                             if($user->file == NULL){
                                 $image = 'Backend/assets/img/user/placeholder.png';
@@ -49,7 +49,6 @@
 
                                     </div>
                                     <div class="col-md-2">{{$user->type}}</div>
-                                    <div class="col-md-2">{{$user->phone}}</div>
                                     <div class="col-md-2"><span @if($user->status == 'inactive')class="badge badge-danger"@endif class="badge badge-success">{{ucfirst($user->status)}}</span></div>
                                     <div class="col-md-2">
                                         @if($user->deleted_at == null) <a class="btn btn-sm btn-secondary" href="{{route('user.edit',$user->id)}}"><span class="mdi mdi-square-edit-outline">Edit</span></a>@endif
@@ -60,7 +59,8 @@
                                                 <button class="btn btn-sm btn-danger" onclick="return confirm('Are You Sure want to delete this user?')"><span style="color:whitesmoke;" class="mdi mdi-delete">Delete</span></button>
                                             </form>
                                         @endif
-                                        @if($user->deleted_at != null)
+
+                                            @if($user->deleted_at != null)
                                             <form style="display: inline;" action="{{route('user.restore',$user->id)}}" method="post">
                                                 @csrf
                                                 @method('post')
@@ -75,25 +75,16 @@
                                             </form>
                                         @endif
 
-
-
-
-
-
                                     </div>
                                 </div>
                             </td>
 
                         </tr>
-                    @endif
+
                 @endforeach
+
                 </tbody>
             </table>
-
-
-
-
-
         </div>
 
     </div>

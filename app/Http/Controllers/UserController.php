@@ -19,7 +19,7 @@ class UserController extends Controller
         $data['title']='Admin List';
         $user = new User();
         $user = $user->withTrashed();
-        $user = $user->orderBy('id','DESC')->paginate(10);
+        $user = $user->orderBy('id','DESC')->paginate(3);
         $data['users'] = $user;
         $data['serial'] = managePagination($user);
 
@@ -53,6 +53,8 @@ class UserController extends Controller
             'status' => 'required'
         ]);
 
+        //dd($request->all());
+
         $user = $request->except('_token','_method');
         $user['password'] = bcrypt($request->password);
 
@@ -62,7 +64,8 @@ class UserController extends Controller
             $file->move('Backend/assets/img/admin/',$file->getClientOriginalName());
             $user['file'] = 'Backend/assets/img/admin/'.$file->getClientOriginalName();
         }
-        User::create($user);
+        //User::create($user);
+
         //  session()->flash('message','Admin Created Successfully');
         Session::flash('success','Admin Created Successfully!');
         return redirect()->route('user.index');
@@ -85,9 +88,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+        $data['title'] ='Edit Admin Information' ;
+        $data['adminInfo'] = $user;
+        return view('admin.user.edit',$data);
     }
 
     /**
@@ -99,7 +104,39 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $request->validate([
+            'adminType' => 'required',
+            'name' => 'required',
+            'email' => 'required',
+            'status' => 'required'
+
+        ]);
+
+
+        $image="";
+        if($request->hasFile('file')){
+            if($request->hasFile('file')){
+                $file = $request->file('file');
+                $file->move('Backend/assets/img/user/',$file->getClientOriginalName());
+                File::delete($request->file);
+                $image = 'Backend/assets/img/user/'.$file->getClientOriginalName();
+            }
+
+        }
+
+        if($image!=NULL){
+            User::where('id',$id)->update(['type'=> $request->adminType,'name'=>$request->name,'email'=>$request->email,'file'=> $image,'status'=>$request->status]);
+            Session::flash('success','Admin Information Updated Successfully!');
+            return redirect()->route('user.index');
+        }else{
+            User::where('id',$id)->update(['type'=> $request->adminType,'name'=>$request->name,'email'=>$request->email,'status'=>$request->status]);
+            Session::flash('success','Admin Information Updated Successfully!');
+            return redirect()->route('user.index');
+        }
+
+
+
     }
 
     /**
@@ -108,8 +145,28 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request,$id)
     {
-        //
+        User::where('id',$id)->delete();
+        File::delete($request->file);
+        Session::flash('error','Admin Deleted!');
+        return redirect()->route('user.index');
+    }
+
+    public function restore($id){
+
+        //dd($id);
+        User::withTrashed()->find($id)->restore();
+        Session::flash('info','Admin Information Restored!');
+        return redirect()->route('user.index');
+    }
+
+    public function delete($id){
+
+        $user = user::where('id',$id)->onlyTrashed()->findOrFail($id);
+        $user->forceDelete();
+        File::delete($user->file);
+        Session::flash('error','Admin Information Deleted Permanently!');
+        return redirect()->route('user.index');
     }
 }
