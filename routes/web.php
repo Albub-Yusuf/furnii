@@ -15,9 +15,11 @@ use Illuminate\Support\Facades\Session;
 |
 */
 
-Route::get('/', function () {
+Route::get('test', function () {
     return view('welcome');
 });
+
+Route::get('/','FrontendController@index')->name('frontend');
 
 Route::get('admin/login','AdminLoginController@loginForm')->name('admin.login.form');
 Route::post('admin/login','AdminLoginController@login')->name('login');
@@ -35,6 +37,9 @@ Route::middleware('auth')->group(function(){
 
 
 });
+
+//Route::get('home','HomeController')->name('home');
+
 
 
 
