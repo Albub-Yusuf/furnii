@@ -1,5 +1,10 @@
 @extends('layouts.backend.master')
 @section('mainContent')
+    @php
+
+           $total_admins = \App\User::count();
+           $total_categories = \App\Category::count();
+    @endphp
 
     <div class="row">
         <div class="col-xl-3 col-sm-6">
@@ -18,7 +23,7 @@
             <div class="card card-mini  mb-4">
                 <div class="card-body">
                     <h2 class="mb-1"></h2>
-                    <p><a href="">Total Categories</a></p>
+                    <p><a href="">Categories: {{$total_categories}} </a></p>
                     <div class="chartjs-wrapper">
                         <canvas id="dual-line"></canvas>
                     </div>
@@ -29,7 +34,7 @@
             <div class="card card-mini mb-4">
                 <div class="card-body">
                     <h2 class="mb-1"></h2>
-                    <p><a href="#">Admins</a></p>
+                    <p><a href="#">Users : {{$total_admins}}</a></p>
                     <div class="chartjs-wrapper">
                         <canvas id="area-chart"></canvas>
                     </div>

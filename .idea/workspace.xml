@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="926319ea-4a9a-4005-9687-52d690a7a7c1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/category/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/category/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminLoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_04_163158_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_04_163158_create_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/backend/_mainNav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/backend/_mainNav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +216,7 @@
       <workItem from="1584608747240" duration="1774000" />
       <workItem from="1584610555804" duration="1768000" />
       <workItem from="1584612369228" duration="1784000" />
-      <workItem from="1584614233029" duration="245000" />
+      <workItem from="1584614233029" duration="708000" />
     </task>
     <servers />
   </component>
