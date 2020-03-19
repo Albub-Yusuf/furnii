@@ -28,6 +28,11 @@ Route::middleware('auth')->group(function(){
     Route::resource('user','UserController');
     Route::post('user/{id}/restore','UserController@restore')->name('user.restore');
     Route::post('user/{id}/delete','UserController@delete')->name('user.delete');
+    Route::resource('category','CategoryController');
+    Route::post('category/{id}/restore','CategoryController@restore')->name('category.restore');
+    Route::delete('category/{id}/delete','CategoryController@delete')->name('category.delete');
+
+
 
 });
 

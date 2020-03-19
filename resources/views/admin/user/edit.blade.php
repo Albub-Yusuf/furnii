@@ -17,7 +17,6 @@
                             <select name="adminType" class="form-control" id="adminType">
                                 <option value="">Choose Admin Type</option>
                                 <option value="1" @if($adminInfo->type == 'admin') selected @endif>Admin</option>
-                                <option value="2" @if($adminInfo->type == 'superadmin') selected @endif>Super Admin</option>
                             </select>
                         </div>
 

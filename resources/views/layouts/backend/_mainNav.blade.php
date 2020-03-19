@@ -68,12 +68,12 @@
 
 
                             <li >
-                                <a class="sidenav-item-link" href="#">
+                                <a class="sidenav-item-link" href="{{route('category.index')}}">
                                     <span class="nav-text">Category List</span>
                                 </a>
                             </li>
                             <li >
-                                <a class="sidenav-item-link" href="#">
+                                <a class="sidenav-item-link" href="{{route('category.create')}}">
                                     <span class="nav-text">Create Category</span>
                                 </a>
                             </li>
