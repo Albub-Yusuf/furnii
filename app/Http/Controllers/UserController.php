@@ -64,7 +64,7 @@ class UserController extends Controller
             $file->move('Backend/assets/img/admin/',$file->getClientOriginalName());
             $user['file'] = 'Backend/assets/img/admin/'.$file->getClientOriginalName();
         }
-        //User::create($user);
+        User::create($user);
 
         //  session()->flash('message','Admin Created Successfully');
         Session::flash('success','Admin Created Successfully!');

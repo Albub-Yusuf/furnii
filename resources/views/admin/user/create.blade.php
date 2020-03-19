@@ -15,9 +15,9 @@
                         <div class="form-group">
                             <label>Select Admin Type</label>
                             <select name="adminType" class="form-control" id="adminType">
-                                <option value="">Choose Admin Type</option>
+                                <option value="admin">Choose Admin Type</option>
                                 <option value="admin">Admin</option>
-                                <option value="superadmin">Super Admin</option>
+                                <!--<option value="superadmin">Super Admin</option>-->
                             </select>
                         </div>
 
