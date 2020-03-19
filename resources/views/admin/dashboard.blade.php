@@ -23,7 +23,7 @@
             <div class="card card-mini  mb-4">
                 <div class="card-body">
                     <h2 class="mb-1"></h2>
-                    <p><a href="">Categories: {{$total_categories}} </a></p>
+                    <p><a href="{{route('category.index')}}">Categories: {{$total_categories}} </a></p>
                     <div class="chartjs-wrapper">
                         <canvas id="dual-line"></canvas>
                     </div>
@@ -34,7 +34,7 @@
             <div class="card card-mini mb-4">
                 <div class="card-body">
                     <h2 class="mb-1"></h2>
-                    <p><a href="#">Users : {{$total_admins}}</a></p>
+                    <p><a href="{{route('user.index')}}">Users : {{$total_admins}}</a></p>
                     <div class="chartjs-wrapper">
                         <canvas id="area-chart"></canvas>
                     </div>
