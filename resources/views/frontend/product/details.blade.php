@@ -360,7 +360,7 @@
                                 <div class="product_title"><a href="#">Simplicity Bluetooth Speaker</a></div>
                             </div>
                         </div>
-                        </a>
+
 
 
                         <!-- Product -->
