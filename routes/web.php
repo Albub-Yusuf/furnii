@@ -20,6 +20,8 @@ Route::get('test', function () {
 });
 
 Route::get('/','FrontendController@index')->name('frontend');
+Route::get('products','Front\ProductController@details')->name('product.details');
+
 
 Route::get('admin/login','AdminLoginController@loginForm')->name('admin.login.form');
 Route::post('admin/login','AdminLoginController@login')->name('login');
@@ -33,6 +35,8 @@ Route::middleware('auth')->group(function(){
     Route::resource('category','CategoryController');
     Route::post('category/{id}/restore','CategoryController@restore')->name('category.restore');
     Route::delete('category/{id}/delete','CategoryController@delete')->name('category.delete');
+
+    Route::resource('product','ProductController');
 
 
 

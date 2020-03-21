@@ -100,12 +100,12 @@
 
 
                             <li >
-                                <a class="sidenav-item-link" href="#">
+                                <a class="sidenav-item-link" href="{{route('product.index')}}">
                                     <span class="nav-text">All Products</span>
                                 </a>
                             </li>
                             <li >
-                                <a class="sidenav-item-link" href="#">
+                                <a class="sidenav-item-link" href="{{route('product.create')}}">
                                     <span class="nav-text">Add New Product</span>
                                 </a>
                             </li>

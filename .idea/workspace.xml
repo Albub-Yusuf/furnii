@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="926319ea-4a9a-4005-9687-52d690a7a7c1" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/product/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/product/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/product/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/frontend/product/details.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontendController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontendController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/backend/_mainNav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/backend/_mainNav.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/frontend/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/frontend/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/frontend/_scripts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/frontend/_scripts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/frontend/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/frontend/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +227,13 @@
       <workItem from="1584768120527" duration="1789000" />
       <workItem from="1584769938723" duration="1617000" />
       <workItem from="1584771746702" duration="766000" />
-      <workItem from="1584773973237" duration="841000" />
+      <workItem from="1584773973237" duration="1783000" />
+      <workItem from="1584775784777" duration="891000" />
+      <workItem from="1584777892246" duration="1729000" />
+      <workItem from="1584779646416" duration="1822000" />
+      <workItem from="1584781503551" duration="1032000" />
+      <workItem from="1584782619135" duration="2031000" />
+      <workItem from="1584784681903" duration="714000" />
     </task>
     <servers />
   </component>
@@ -235,19 +249,23 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="542" y="222" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1742142422131" />
-    <state x="567" y="214" key="FileChooserDialogImpl" timestamp="1584766322970">
+    <state x="499" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1584782807185">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="567" y="214" key="FileChooserDialogImpl/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1584766322970" />
+    <state x="499" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1584782807185" />
+    <state x="567" y="214" key="FileChooserDialogImpl" timestamp="1584782739510">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="567" y="214" key="FileChooserDialogImpl/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1584782739510" />
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584503801370" />
     <state x="604" y="344" key="NewPhpFileDialog" timestamp="1584509284109">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="604" y="344" key="NewPhpFileDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1584509284109" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1584773987802">
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1584782620230">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1584773987802" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1584782620230" />
     <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584592045145" />
     <state x="425" y="66" width="672" height="676" key="search.everywhere.popup" timestamp="1584512512384">
       <screen x="0" y="0" width="1536" height="824" />

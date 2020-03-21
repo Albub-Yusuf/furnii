@@ -14,8 +14,10 @@
                                 <a href="categories.html">products</a>
                                 <ul>
                                     @foreach($categories as $category)
+                                        @if($category->status == 'active')
                                         <li><a href="#">{{$category->name}}</a></li>
                                         <hr>
+                                        @endif
                                     @endforeach
                                 </ul>
                             </li>

@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('Frontend/plugins/OwlCarousel2-2.2.1/animate.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('Frontend/styles/main_styles.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('Frontend/styles/responsive.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('Frontend/facncybox/jquery.fancybox.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" id="bootstrap-css">
     <link href="{{asset('Frontend/images/teutons-icon.png')}}" rel="shortcut icon" />
 
 
