@@ -7,19 +7,16 @@
                     <nav class="main_nav">
                         <ul>
                             <li class="hassub">
-                                <a href="index.html">Home</a>
+                                <a href="{{route('frontend')}}">Home</a>
                             </li>
                             <li><a href="#">About Us</a></li>
                             <li class="hassubs">
                                 <a href="categories.html">products</a>
                                 <ul>
-                                    <li><a href="categories.html">USB Flash Drive</a></li>
-                                    <hr>
-                                    <li class="dropdown"><a href="categories.html">SSD</a>
-                                    </li><hr>
-                                    <li><a href="categories.html">RAM</a></li><hr>
-                                    <li><a href="categories.html">Bluetooth Speaker</a></li><hr>
-                                    <li><a href="categories.html">Cable</a></li><hr>
+                                    @foreach($categories as $category)
+                                        <li><a href="#">{{$category->name}}</a></li>
+                                        <hr>
+                                    @endforeach
                                 </ul>
                             </li>
                             <li><a href="#">News & Events</a></li>
