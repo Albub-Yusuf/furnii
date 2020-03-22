@@ -15,6 +15,18 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories');
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->text('short_description')->nullable();
+            $table->tinyInteger('is_featured')->default('0');
+            $table->tinyInteger('is_new')->default('0');
+            $table->enum('status',['active','inactive']);
+            $table->text('featured_image')->nullable();
+            $table->softDeletes();
+            $table->unsignedBigInteger('created_by');
+            $table->unsignedBigInteger('updated_by')->nullable();
             $table->timestamps();
         });
     }

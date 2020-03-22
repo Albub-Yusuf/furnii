@@ -278,26 +278,34 @@
 
     <!-- Ad -->
 
-    <div class="avds_xl">
+    <div class="avds_xl " >
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="avds_xl_container clearfix">
-                        <div class="avds_xl_background" style="background-image:url(http://localhost/teutonsDev/public/Frontend/images/avds_xl.jpg)"></div>
-                        <div class="avds_xl_content">
-                            <div class="avds_title">Amazing Devices</div>
-                            <div class="avds_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus.</div>
+                        <div class="avds_xl_background" style="background-image:url(http://localhost/teutonsDev/public/Frontend/images/about_us.jpg)"></div>
+                        <div class="avds_xl_content" style="font-color:#e95a5a; width:82%;">
+                            <div class="avds_title">About Us</div>
+                            <div class="avds_text">
+                                <p style="color:#000;">Created by technology experts who are artistic and innovative.
+                                    Specialized in high-end designing, a manufacturing and marketing innovative memory product is its sole purpose.
+                                    All TEUTONS® product’s research-development & designed in Spain.
+                                </p></div>
                             <div class="avds_link avds_xl_link"><a href="categories.html">See More</a></div>
+
+                            </div>
+                            <!--<div class="avds_link avds_xl_link"><a href="categories.html">See More</a></div>-->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
+    <br><br>
     <!--Test Div(About US)-->
-    <div class="newsletter">
-        <div class="container">
+    <!--
+    <div class="newsletter col-lg-10 offset-lg-1" >
+        <div class="container" >
             <div class="row">
                 <div class="col">
                     <div class="newsletter_border"></div>
@@ -313,4 +321,6 @@
             </div>
         </div>
     </div>
+    -->
+    <br>
 @endsection

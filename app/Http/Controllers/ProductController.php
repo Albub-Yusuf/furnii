@@ -6,6 +6,8 @@ use App\Brand;
 use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+
 
 class ProductController extends Controller
 {
@@ -14,9 +16,33 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $data['title'] = 'Product List';
+        $product = new Product();
+        $product = $product->withTrashed();
+       /**
+        if($request->has('search') && ($request->search !=null)){
+            $product = $product->where('name','like','%'.$request->search.'%');
+        }
+        if($request->has('status') && ($request->status !=null)){
+            $product = $product->where('status',$request->status);
+        }
+         **/
+
+        $product = $product->orderBy('id','DESC')->paginate(10);
+        $data['products'] = $product;
+
+        if(isset($request->status) || ($request->search)){
+
+            $render['status'] = $request->status;
+            $render['search'] = $request->search;
+            $product = $product->appends($render);
+        }
+
+
+        $data['serial'] = managePagination($product);
+        return view('admin.product.index',$data);
     }
 
     /**
@@ -39,7 +65,31 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'category_id' => 'required',
+            'name' => 'required',
+            'description' => 'required',
+            'status' => 'required',
+            'images.*' => 'image'
+        ]);
+        //dd($request->all());
+        $user = auth()->user();
+        $product_image = $request->images;
+        //File Upload
+
+
+        $product_data = $request->except('_token','images');
+
+        if($request->hasFile('featured_image')){
+            $file = $request->file('featured_image');
+            $file->move('Backend/assets/img/products/',$file->getClientOriginalName());
+            $product_data['featured_image'] = 'Backend/assets/img/products/'.$file->getClientOriginalName();
+        }
+        $product_data['created_by'] = $user->id;
+        $product_data['updated_by'] = 0;
+        Product::create($product_data);
+        Session::flash('success','Product Created Successfully!!');
+        return redirect()->route('admin.dashboard');
     }
 
     /**

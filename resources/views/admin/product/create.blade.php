@@ -74,7 +74,7 @@
                                                         </span>
                             </div>
                         <!-- <input type="text" name="details" value="{{old('details')}}"  class="form-control" placeholder="Enter Product details" aria-label="details">-->
-                            <textarea name="description" required class="form-control" id="Product_description" cols="80" rows="5">{{old('description')}}</textarea>
+                            <textarea name="short_description" required class="form-control" id="Product_short_description" cols="80" rows="5">{{old('description')}}</textarea>
                         </div>
 
 
@@ -100,20 +100,20 @@
 
                         </ul>
 
-                        <label class="text-dark mb-2 mt-4 font-weight-medium d-inline-block mr-3" for="is_featured">Is New</label>
+                        <label class="text-dark mb-2 mt-4 font-weight-medium d-inline-block mr-3" for="is_new">Is New</label>
                         <ul class="list-unstyled list-inline">
                             <li class="d-inline-block mr-3">
                                 @php
-                                    if(old("is_featured")){
-                                         $is_featured = old('is_featured');
+                                    if(old("is_new")){
+                                         $is_new = old('is_new');
                                      }elseif(isset($product_data)){
 
-                                     $is_featured = $product_data->is_featured;
+                                     $is_new = $product_data->is_new;
                                  }else{
-                                     $is_featured = null;
+                                     $is_new = null;
                              }@endphp
-                                <label for="yes" class="control control-checkbox">Yes
-                                    <input type="checkbox" id="yes" value="1" @if($is_featured == 1) checked @endif name="is_featured" />
+                                <label for="positive" class="control control-checkbox">Yes
+                                    <input type="checkbox" id="positive" value="1" @if($is_new == 1) checked @endif name="is_new" />
                                     <div class="control-indicator"></div>
                                 </label>
                             </li>
@@ -147,6 +147,20 @@
                                 </label>
                             </li>
                         </ul>
+
+
+                        <div class="col-md-12">
+                            <label class="text-dark font-weight-medium" for="image">Product Featured Image</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+														<span class="input-group-text">
+															<i class="mdi mdi-image"></i>
+                                                        </span>
+
+                                </div>
+                                <input type="file" class="form-control" name="featured_image" id="featured_image" multiple>
+                            </div>
+                        </div>
 
 
                         <div class="col-md-12">
