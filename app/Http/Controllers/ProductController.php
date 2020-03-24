@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Brand;
+//use App\Brand;
 use App\Category;
 use App\Product;
+use App\Productimage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -87,9 +88,31 @@ class ProductController extends Controller
         }
         $product_data['created_by'] = $user->id;
         $product_data['updated_by'] = 0;
-        Product::create($product_data);
+        $product = Product::create($product_data);
+
+        //image upload
+        if($product_image!=NULL)
+        {
+            foreach($request->images as $image){
+                //dd($product_data);
+                $product_image['product_id'] = $product->id;
+                $image->move('Backend/assets/img/products/',$image->getClientOriginalName());
+                $product_image['file_path'] = 'Backend/assets/img/products/'.$image->getClientOriginalName();
+                Session::flash('success','Product Created Successfully!!');
+                Productimage::create($product_image);
+            }
+
+        }
+
+        if($product_image ==NULL){
+            Session::flash('success','Product Created Successfully!!');
+            return redirect()->route('product.index');
+        }
+
+
+
         Session::flash('success','Product Created Successfully!!');
-        return redirect()->route('admin.dashboard');
+        return redirect()->route('product.index');
     }
 
     /**

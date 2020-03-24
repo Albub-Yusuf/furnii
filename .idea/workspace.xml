@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="926319ea-4a9a-4005-9687-52d690a7a7c1" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/backend/_stylesheet.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_21_072348_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_21_072348_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/styles/main_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/Frontend/styles/main_styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/product/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/backend/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/backend/master.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +157,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CoreValue" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RunManager">
@@ -243,6 +242,14 @@
       <workItem from="1584854856063" duration="1791000" />
       <workItem from="1584856676773" duration="1789000" />
       <workItem from="1584858484783" duration="1447000" />
+      <workItem from="1584860439648" duration="753000" />
+      <workItem from="1585029759630" duration="536000" />
+      <workItem from="1585031678524" duration="1790000" />
+      <workItem from="1585033486632" duration="1820000" />
+      <workItem from="1585035328942" duration="830000" />
+      <workItem from="1585040551510" duration="1257000" />
+      <workItem from="1585042021631" duration="1808000" />
+      <workItem from="1585044071313" duration="835000" />
     </task>
     <servers />
   </component>
@@ -258,10 +265,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="542" y="222" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1742142422131" />
-    <state x="499" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1584855175228">
+    <state x="499" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585042240521">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1584855175228" />
+    <state x="499" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1585042240521" />
     <state x="567" y="214" key="FileChooserDialogImpl" timestamp="1584851233523">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -271,11 +278,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="604" y="344" key="NewPhpFileDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1584509284109" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1584858486559">
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1585042024755">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1584858486559" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584851060876" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1585042024755" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585033495412" />
     <state x="425" y="66" width="672" height="676" key="search.everywhere.popup" timestamp="1584512512384">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

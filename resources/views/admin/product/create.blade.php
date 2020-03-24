@@ -1,7 +1,20 @@
 @extends('layouts.backend.master')
+@section('csj')
+    <script src="https://cdn.tiny.cloud/1/edg1ry9kn8z5vkhjc572eauiiglzsmho9b6l8gjztmnbu7zf/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <style>
+        .mce-notification-inner {display:none!important;}
+    </style>
+
+    <!--script>
+        tinymce.init({
+           selector: 'textarea'
+        });
+    </script-->
+
+@endsection
 @section('mainContent')
     <div class="row">
-        <div class="col-lg-8 offset-2">
+        <div class="col-lg-10 offset-1">
             <div class="card card-default">
                 <div class="card-header card-header-border-bottom">
                     <h3 class="text-center">{{$title}}</h3>
@@ -62,7 +75,7 @@
                                                         </span>
                             </div>
                         <!-- <input type="text" name="details" value="{{old('details')}}"  class="form-control" placeholder="Enter Product details" aria-label="details">-->
-                            <textarea name="description" required class="form-control" id="Product_description" cols="80" rows="5">{{old('description')}}</textarea>
+                            <textarea name="description" required class="form-control" id="Product_description" cols="120" rows="15">{{old('description')}}</textarea>
                         </div>
 
 
@@ -74,7 +87,7 @@
                                                         </span>
                             </div>
                         <!-- <input type="text" name="details" value="{{old('details')}}"  class="form-control" placeholder="Enter Product details" aria-label="details">-->
-                            <textarea name="short_description" required class="form-control" id="Product_short_description" cols="80" rows="5">{{old('description')}}</textarea>
+                            <textarea name="short_description" required class="form-control" id="Product_short_description" cols="120" rows="10">{{old('description')}}</textarea>
                         </div>
 
 
