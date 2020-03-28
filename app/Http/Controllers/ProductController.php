@@ -162,10 +162,8 @@ class ProductController extends Controller
             'images.*' => 'image'
 
         ]);
-        //dd($request->all());
         $user = auth()->user();
         $product_images = $request->images;
-        //dd($product_images);
         $product_data = $request->except('_token','_method');
 
         if(!$request->has(['is_featured'])){
@@ -175,20 +173,20 @@ class ProductController extends Controller
         if(!$request->has(['is_new'])){
             $product_data['is_new'] = 0;
         }
-        // dd($product_data);
-
         $product_data['created_by'] = $user->id;
         $product_data['updated_by'] = $user->id;
-        if($request->hasFile('featured_image')){
-            $file = $request->file('featured_image');
-            $file->move('Backend/assets/img/products/',time().$file->getClientOriginalName());
-            File::delete($request->featured_image);
-            $product_data['featured_image'] = 'Backend/assets/img/products/'.time().$file->getClientOriginalName();
-        }
 
+        //featured image update
+        if($request->featured_image != NULL){
+            File::delete($product->featured_image);
+            if($request->hasFile('featured_image')){
+                $file = $request->file('featured_image');
+                $file->move('Backend/assets/img/products/',time().$file->getClientOriginalName());
+                $product_data['featured_image'] = 'Backend/assets/img/products/'.time().$file->getClientOriginalName();}
+        }
         $product->update($product_data);
 
-        //image upload
+        //images upload
         if($product_images != NULL)
         {
             foreach($request->images as $image){
@@ -217,7 +215,36 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        $product->delete();
+        Session::flash('error','Product Deleted!!');
+        return redirect()->route('product.index');
+    }
+
+    public function restore($id){
+
+        Product::where('id',$id)->onlyTrashed()->restore();
+        Session::flash('success','Product Restored');
+        return redirect()->route('product.index');
+    }
+
+    public function delete($id){
+        $product = Product::where('id',$id)->onlyTrashed()->with('product_image')->findOrFail($id);
+        if(count($product->product_image))
+        {
+            foreach($product->product_image as $image){
+
+                File::delete($image->file_path);
+                $image->delete();
+
+            }
+
+        }
+
+
+        $product->forceDelete();
+        File::delete($product->featured_image);
+        Session::flash('error','Product Permanently Deleted');
+        return redirect()->route('product.index');
     }
 
     public function delete_image($image_id){
