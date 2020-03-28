@@ -2,7 +2,20 @@
     use Illuminate\Support\Str;
 @endphp
 @extends('layouts.backend.master')
-
+@section('searchForm')
+    <div class="input-group">
+        <form style="display: inline-flex;" action="" method="">
+            <button type="submit" name="search-btn" id="search-btn" class="btn btn-flat">
+                <i class="mdi mdi-magnify"></i>
+            </button>
+            <input  type="text" name="search" value="{{request()->search}}" id="search-input" class="form-control" placeholder="Search Product Here ..."
+                   autofocus autocomplete="off" />
+        </form>
+    </div>
+    <div id="search-results-container">
+        <ul id="search-results"></ul>
+    </div>
+@endsection
 @section('mainContent')
 
     <div class="row">

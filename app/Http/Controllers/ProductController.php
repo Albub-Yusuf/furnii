@@ -1,8 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
-//use App\Brand;
 use App\Category;
 use App\Product;
 use App\Productimage;
@@ -23,26 +21,18 @@ class ProductController extends Controller
         $data['title'] = 'Product List';
         $product = new Product();
         $product = $product->withTrashed();
-       /**
+
         if($request->has('search') && ($request->search !=null)){
             $product = $product->where('name','like','%'.$request->search.'%');
         }
-        if($request->has('status') && ($request->status !=null)){
-            $product = $product->where('status',$request->status);
-        }
-         **/
 
         $product = $product->orderBy('id','DESC')->paginate(10);
         $data['products'] = $product;
 
-        if(isset($request->status) || ($request->search)){
-
-            $render['status'] = $request->status;
+        if(isset($request->search)){
             $render['search'] = $request->search;
             $product = $product->appends($render);
         }
-
-
         $data['serial'] = managePagination($product);
         return view('admin.product.index',$data);
     }
@@ -74,12 +64,11 @@ class ProductController extends Controller
             'status' => 'required',
             'images.*' => 'image'
         ]);
-        //dd($request->all());
+
         $user = auth()->user();
         $product_image = $request->images;
+
         //File Upload
-
-
         $product_data = $request->except('_token','images');
 
         if($request->hasFile('featured_image')){
@@ -151,7 +140,6 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-
         $request->validate([
 
             'category_id' => 'required',
@@ -160,7 +148,6 @@ class ProductController extends Controller
             'status' => 'required',
             'featured_image'=>'image',
             'images.*' => 'image'
-
         ]);
         $user = auth()->user();
         $product_images = $request->images;
@@ -195,7 +182,6 @@ class ProductController extends Controller
                 $product_image['file_path'] = 'Backend/assets/img/products/'.time().$image->getClientOriginalName();
                 ProductImage::create($product_image);
             }
-
         }
 
         if($request->images == NULL){
@@ -207,12 +193,6 @@ class ProductController extends Controller
         return redirect()->route('product.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Product $product)
     {
         $product->delete();
@@ -235,11 +215,8 @@ class ProductController extends Controller
 
                 File::delete($image->file_path);
                 $image->delete();
-
             }
-
         }
-
 
         $product->forceDelete();
         File::delete($product->featured_image);
