@@ -4,6 +4,7 @@
 
            $total_admins = \App\User::count();
            $total_categories = \App\Category::count();
+           $total_products = \App\Product::count();
     @endphp
 
     <div class="row">
@@ -11,7 +12,7 @@
             <div class="card card-mini mb-4">
                 <div class="card-body">
                     <h2 class="mb-1"></h2>
-                    <p><a href="{{route('product.index')}}">Total Products</a></p>
+                    <p><a href="{{route('product.index')}}">Products: {{$total_products}}</a></p>
                     <div class="chartjs-wrapper">
                         <canvas id="barChart"></canvas>
                     </div>

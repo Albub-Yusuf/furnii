@@ -134,7 +134,11 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+       $data['title']= "Edit Product";
+       $data['product'] = $product;
+       $data['categories'] = Category::orderBy('name')->pluck('name','id');
+
+       return view('admin.product.edit',$data);
     }
 
     /**
@@ -146,7 +150,18 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+
+        $request->validate([
+
+            'category_id' => 'required',
+            'name' => 'required',
+            'description' => 'required',
+            'status' => 'required',
+            'featured_image'=>'image',
+            'images.*' => 'image'
+
+        ]);
+        dd($request->all());
     }
 
     /**

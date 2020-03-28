@@ -14,7 +14,7 @@
 @endsection
 @section('mainContent')
     <div class="row">
-        <div class="col-lg-10 offset-1">
+        <div class="col-lg-12 offset-0">
             <div class="card card-default">
                 <div class="card-header card-header-border-bottom">
                     <h3 class="text-center">{{$title}}</h3>
