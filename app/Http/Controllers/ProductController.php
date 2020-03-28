@@ -7,6 +7,7 @@ use App\Category;
 use App\Product;
 use App\Productimage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
 
 
@@ -83,8 +84,8 @@ class ProductController extends Controller
 
         if($request->hasFile('featured_image')){
             $file = $request->file('featured_image');
-            $file->move('Backend/assets/img/products/',$file->getClientOriginalName());
-            $product_data['featured_image'] = 'Backend/assets/img/products/'.$file->getClientOriginalName();
+            $file->move('Backend/assets/img/products/',time().$file->getClientOriginalName());
+            $product_data['featured_image'] = 'Backend/assets/img/products/'.time().$file->getClientOriginalName();
         }
         $product_data['created_by'] = $user->id;
         $product_data['updated_by'] = 0;
@@ -96,8 +97,8 @@ class ProductController extends Controller
             foreach($request->images as $image){
                 //dd($product_data);
                 $product_image['product_id'] = $product->id;
-                $image->move('Backend/assets/img/products/',$image->getClientOriginalName());
-                $product_image['file_path'] = 'Backend/assets/img/products/'.$image->getClientOriginalName();
+                $image->move('Backend/assets/img/products/',time().$image->getClientOriginalName());
+                $product_image['file_path'] = 'Backend/assets/img/products/'.time().$image->getClientOriginalName();
                 Session::flash('success','Product Created Successfully!!');
                 Productimage::create($product_image);
             }
@@ -161,7 +162,51 @@ class ProductController extends Controller
             'images.*' => 'image'
 
         ]);
-        dd($request->all());
+        //dd($request->all());
+        $user = auth()->user();
+        $product_images = $request->images;
+        //dd($product_images);
+        $product_data = $request->except('_token','_method');
+
+        if(!$request->has(['is_featured'])){
+            $product_data['is_featured'] = 0;
+        }
+
+        if(!$request->has(['is_new'])){
+            $product_data['is_new'] = 0;
+        }
+        // dd($product_data);
+
+        $product_data['created_by'] = $user->id;
+        $product_data['updated_by'] = $user->id;
+        if($request->hasFile('featured_image')){
+            $file = $request->file('featured_image');
+            $file->move('Backend/assets/img/products/',time().$file->getClientOriginalName());
+            File::delete($request->featured_image);
+            $product_data['featured_image'] = 'Backend/assets/img/products/'.time().$file->getClientOriginalName();
+        }
+
+        $product->update($product_data);
+
+        //image upload
+        if($product_images != NULL)
+        {
+            foreach($request->images as $image){
+                $product_image['product_id'] = $product->id;
+                $image->move('Backend/assets/img/products/',time().$image->getClientOriginalName());
+                $product_image['file_path'] = 'Backend/assets/img/products/'.time().$image->getClientOriginalName();
+                ProductImage::create($product_image);
+            }
+
+        }
+
+        if($request->images == NULL){
+            Session::flash('success','Product Updated!!');
+            return redirect()->route('product.index');
+
+        }
+        Session::flash('success','Product Updated!!');
+        return redirect()->route('product.index');
     }
 
     /**
@@ -173,5 +218,13 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         //
+    }
+
+    public function delete_image($image_id){
+
+        $image = ProductImage::findOrFail($image_id);
+        File::delete($image->file_path);
+        $image->delete();
+        return redirect()->back();
     }
 }
