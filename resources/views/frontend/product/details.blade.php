@@ -194,17 +194,13 @@
                 <!-- Product Image -->
                 <div class="col-lg-6">
                     <div class="details_image">
-                        <div class="details_image_large"><a href="{{asset('Frontend/images/Toledo1.jpg')}}" data-fancybox data-caption="Product Image"><img src="{{asset('Frontend/images/Toledo1.jpg')}}" alt=""></a><div class="product_extra product_new"><a href="#">New</a></div></div>
+                        <div class="details_image_large"><a href="{{asset($product->featured_image)}}" data-fancybox data-caption="Product Image"><img src="{{asset($product->featured_image)}}" alt=""></a>@if($product->is_new==1) <div class="product_extra product_new"><a href="#">New</a></div> @endif</div>
                         <div class="details_image_thumbnails d-flex flex-row align-items-start">
-
-
-                            <div class="details_image_thumbnail active" data-image="{{asset('Frontend/images/Toledo1.jpg')}}"> <a href="{{asset('Frontend/images/Toledo(1).jpg')}}" data-fancybox data-caption="Toledo X8 Blue Color"> <img src="{{asset('Frontend/images/Toledo.jpg')}}" alt=""> </a></div>
-
-                            <div class="details_image_thumbnail" data-image="{{asset('Frontend/images/Toledo1.jpg')}}"> <a href="{{asset('Frontend/images/Toledo1.jpg')}}" data-fancybox data-caption="Toledo X8 Orange Color"><img src="{{asset('Frontend/images/Toledo1.jpg')}}" alt=""> </a></div>
-
-                            <!--div class="details_image_thumbnail" data-image="images/Toledo1.jpg"> <a href="images/details_3.jpg" data-fancybox data-caption="Product Image #3"><img src="images/details_3.jpg" alt=""> </a></div-->
-
-                            <!--div class="details_image_thumbnail" data-image="images/Toledo1.jpg"> <a href="images/details_4.jpg" data-fancybox data-caption="Product Image #4"><img src="images/details_4.jpg" alt=""> </a></div-->
+                            @if(count($product->product_image))
+                                @foreach($product->product_image as $image)
+                                    <div class="details_image_thumbnail active" data-image="{{URL::asset($image->file_path)}}"> <a href="{{asset($image->file_path)}}" data-fancybox data-caption="{{$product->name}}"> <img src="{{URL::asset($image->file_path)}}" alt=""> </a></div>
+                                @endforeach
+                            @endif
 
                         </div>
                     </div>
@@ -213,14 +209,16 @@
                 <!-- Product Content -->
                 <div class="col-lg-6">
                     <div class="details_content">
-                        <div class="details_name">Toledo X8 Wireless Bluetooth Speaker</div>
+                        <div class="details_name">{{$product->name}}</div>
 
                         <!-- In Stock -->
                         <div class="in_stock_container">
                             <div class="availability">Category:</div>
-                            <span>Category Name</span>
+                            <span>{{$product->category->name}}</span>
                         </div>
                         <div class="details_text">
+                            {!! $product->short_description !!}
+                            <!--
                             <p>TOLEDO X8 a quality wireless bluetooth speaker with elegant design. Packed with 10W (5W x 2) dual stereo speaker. Support bluetooth with hands free call function, FM radio, 3.5mm AUX input & microSD card for playing your desire music.It’s 1200mAh Lithium Battery will provide up to 5 hours of playback time.
 
 
@@ -236,6 +234,7 @@
                                 <li>Lithium Battery: 1200mAh</li>
                             </ul>
                             </p>
+                            -->
                         </div>
 
                         <!-- Product Quantity -->
@@ -243,6 +242,7 @@
 
                         <!-- Share -->
                         <div class="details_share">
+                            <!--
                             <span>Share:</span>
                             <ul>
                                 <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
@@ -250,6 +250,7 @@
                                 <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                             </ul>
+                            -->
                         </div>
                     </div>
                 </div>
@@ -280,6 +281,8 @@
                                             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
                                                 <div class="description_text">
+                                                    {!! $product->description !!}
+                                                    <!--
                                                     <p style="color:#6c6a74;">TOLEDO X8 a quality wireless bluetooth speaker with elegant design. Packed with 10W (5W x 2) dual stereo speaker. Support bluetooth with hands free call function, FM radio, 3.5mm AUX input & microSD card for playing your desire music.It’s 1200mAh Lithium Battery will provide up to 5 hours of playback time.
 
 
@@ -295,11 +298,14 @@
                                                         <li>Lithium Battery: 1200mAh</li>
                                                     </ul>
                                                     </p>
+                                                    -->
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
 
                                                 <div class="description_text">
+                                                   {!! $product->short_description !!}
+                                                    <!--
                                                     <p>
                                                     <h4 style="color:#6c6a74">Product Specifications:</h4>
                                                     <ul style="list-style-type:disc; color:#6c6a74;">
@@ -312,6 +318,7 @@
                                                         <li>Lithium Battery: 1200mAh</li>
                                                     </ul>
                                                     </p>
+                                                    -->
                                                 </div>
 
                                             </div>

@@ -2,7 +2,7 @@
 @section('mainContent')
     <div class="row">
 
-        <div class="col-sm-12 col-md-8 col-lg-8 offset-2">
+        <div class="col-sm-12 col-md-12 col-lg-12 offset-0">
             <div class="text-center"><h3>Category List</h3></div>
             <table class="table table-responsive-sm table-bordered">
                 <thead class="thead-light">

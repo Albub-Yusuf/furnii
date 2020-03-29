@@ -17,7 +17,7 @@
                                     <div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
                                         <div class="home_slider_title">A new Online Shop experience.</div>
                                         <div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</div>
-                                        <div class="button button_light home_button"><a href="#">Shop Now</a></div>
+                                        <div class="button button_light home_button"><a href="#">Visit Now</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -27,15 +27,15 @@
 
                 <!-- Slider Item -->
                 <div class="owl-item home_slider_item">
-                    <div class="home_slider_background" style="background-image:url(http://localhost/teutonsDev/public/Frontend/images/home_slider_1.jpg)"></div>
-                    <div class="home_slider_content_container">
+                    <div class="home_slider_background" style="background-image:url(http://localhost/teutonsDev/public/Frontend/images/Slider-03.jpg)"></div>
+                    <div class="home_slider_content_container" >
                         <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
+                                    <div style="float:right;"class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
                                         <div class="home_slider_title">A new Online Shop experience.</div>
-                                        <div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</div>
-                                        <div class="button button_light home_button"><a href="#">Shop Now</a></div>
+                                        <!--div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</div>-->
+                                        <div class="button button_light home_button"><a href="#">Visit Now</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -45,15 +45,15 @@
 
                 <!-- Slider Item -->
                 <div class="owl-item home_slider_item">
-                    <div class="home_slider_background" style="background-image:url(http://localhost/teutonsDev/public/Frontend/images/home_slider_1.jpg)"></div>
+                    <div class="home_slider_background" style="background-image:url(http://localhost/teutonsDev/public/Frontend/images/about_us.jpg)"></div>
                     <div class="home_slider_content_container">
                         <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
-                                        <div class="home_slider_title">A new Online Shop experience.</div>
-                                        <div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</div>
-                                        <div class="button button_light home_button"><a href="#">Shop Now</a></div>
+                                    <div style="float:right;" class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
+                                        <div style="color:#000;" class="home_slider_title" data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">A new Online Shop experience.</div>
+                                       <!-- <div style="color:#000;" class="home_slider_subtitle" data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</div> -->
+                                        <div  style="color:#000;" class="button button_light home_button" data-animation-in="fadeIn" data-animation-out="animate-out fadeOut"><a style="color:#000;" href="#">Visit Now</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -94,15 +94,15 @@
                     <div class="avds_discount_container">
                         <img src="{{asset('Frontend/images/discount.png')}}" alt="">
                         <div>
-                            <div class="avds_discount">
+                            <div class="avds_discount" style="color:#fff;">
                                 <div>20<span>%</span></div>
                                 <div>Discount</div>
                             </div>
                         </div>
                     </div>
-                    <div class="avds_small_content">
-                        <div class="avds_title">Smart Phones</div>
-                        <div class="avds_link"><a href="categories.html">See More</a></div>
+                    <div class="avds_small_content" style="color:#fff;">
+                        <div class="avds_title" style="color:#fff;">Smart Phones</div>
+                        <div class="avds_link"><a href="#" style="color:#fff;">See More</a></div>
                     </div>
                 </div>
             </div>
@@ -110,9 +110,9 @@
                 <div class="avds_background" style="background-image:url(http://localhost/teutonsDev/public/Frontend/images/avds_large.jpg)"></div>
                 <div class="avds_large_container">
                     <div class="avds_large_content">
-                        <div class="avds_title">Professional Cameras</div>
-                        <div class="avds_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viver ra velit venenatis fermentum luctus.</div>
-                        <div class="avds_link avds_link_large"><a href="categories.html">See More</a></div>
+                        <div class="avds_title" style="color:#fff;">Professional Cameras</div>
+                        <div class="avds_text" style="color:#fff;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viver ra velit venenatis fermentum luctus.</div>
+                        <div class="avds_link avds_link_large" style="color:#fff;"><a style="color:#fff;" href="categories.html">See More</a></div>
                     </div>
                 </div>
             </div>
@@ -129,44 +129,21 @@
                 <div class="col-md-5" style=" max-height:1px; background-color:#00aced;float:right;"></div>
                </div>
 
-
-
-
             <br><br><br>
             <div class="row">
                 <div class="col">
 
                     <div class="product_grid">
                         <!-- Product -->
+                        @foreach($featured_products as $product)
                         <div class="product">
-                            <div class="product_image"><a href="{{route('product.details')}}"><img src="{{asset('Frontend/images/Olite_Blue.jpg')}}" alt=""></a></div>
+                            <div class="product_image"><a href="{{route('product.details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt="Featured Product"></a></div>
                             <div class="product_content">
-                                <div class="product_title"><a href="#">Olite Bluetooth Speaker</a></div>
+                                <div class="product_title text-sm-center" ><a href="{{route('product.details',$product->id)}}">{{$product->name}}</a></div>
                             </div>
                         </div>
-                        <!-- Product -->
-                        <div class="product">
-                            <div class="product_image"><a href="{{route('product.details')}}"><img src="{{asset('Frontend/images/Box_Blue.jpg')}}" alt=""></a></div>
-                            <div class="product_content">
-                                <div class="product_title"><a href="#">Olite Bluetooth Wireless Speaker</a></div>
-                            </div>
-                        </div>
-                        <!-- Product -->
-                        <div class="product">
-                            <div class="product_image"><a href="#"><img src="{{asset('Frontend/images/s-gold.jpg')}}" alt=""></a></div>
-                            <div class="product_extra product_new"><a href="#">New</a></div>
-                            <div class="product_content">
-                                <div class="product_title"><a href="#">Simplicity Bluetooth Speaker</a></div>
-                            </div>
-                        </div>
-                        <!-- Product -->
-                        <div class="product">
-                            <div class="product_image"><a href="#"><img src="{{asset('Frontend/images/S-pack.jpg')}}" alt=""></a></div>
-                            <div class="product_content">
-                                <div class="product_title"><a href="#">Olite Bluetooth Speaker</a></div>
-                            </div>
-                        </div>
-                       <div style="float:right; margin-top:-9%; background-color:transparent;"><sup><a href="{{route('product.details')}}">View More</a></sup></div>
+                        @endforeach
+                       <div style="float:right; margin-top:-9%; background-color:transparent;"><sup><a href="#">View More</a></sup></div>
 
                     </div>
 
@@ -190,85 +167,19 @@
                 <div class="col">
 
                     <div class="product_grid">
-
-
                         <!-- Product -->
+                        @foreach($latest_products as $product)
                         <div class="product">
-                            <div class="product_image"><a href="{{route('product.details')}}"><img src="{{asset('Frontend/images/Toledo.jpg')}}" alt=""></a></div>
-                            <div class="product_extra product_new"><a href="categories.html">New</a></div>
+                            <div class="product_image"><a href="{{route('product.details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt=""></a></div>
+                            <div class="product_extra product_new"><a href="#">New</a></div>
                             <div class="product_content">
-                                <div class="product_title"><a href="productCopy.html">Toledo X8 Wirless Bluetooth Speaker</a></div>
+                                <div class="product_title text-sm-center"><a href="{{route('product.details',$product->id)}}">{{$product->name}}</a></div>
 
                             </div>
                         </div>
+                        @endforeach
 
-                        <!-- Product -->
-                        <div class="product">
-                            <div class="product_image"><img src="{{asset('Frontend/images/product_2.jpg')}}" alt=""></div>
-                            <div class="product_extra product_sale"><a href="categories.html">Sale</a></div>
-                            <div class="product_content">
-                                <div class="product_title"><a href="product.html">Smart Phone</a></div>
-                                <div class="product_price">$670</div>
-                            </div>
-                        </div>
-
-                        <!-- Product -->
-                        <div class="product">
-                            <div class="product_image"><img src="{{asset('Frontend/images/product_3.jpg')}}" alt=""></div>
-                            <div class="product_content">
-                                <div class="product_title"><a href="product.html">Smart Phone</a></div>
-                                <div class="product_price">$670</div>
-                            </div>
-                        </div>
-
-                        <!-- Product -->
-                        <div class="product">
-                            <div class="product_image"><img src="{{asset('Frontend/images/product_4.jpg')}}" alt=""></div>
-                            <div class="product_content">
-                                <div class="product_title"><a href="product.html">Smart Phone</a></div>
-                                <div class="product_price">$670</div>
-                            </div>
-                        </div>
-                        <div style="float:right; margin-top:-9%; background-color:transparent;"><sup><a href="{{route('product.details')}}">View More</a></sup></div>
-
-                        <!-- Product -->
-                        <div class="product">
-                            <div class="product_image"><img src="{{asset('Frontend/images/product_5.jpg')}}" alt=""></div>
-                            <div class="product_content">
-                                <div class="product_title"><a href="product.html">Smart Phone</a></div>
-                                <div class="product_price">$670</div>
-                            </div>
-                        </div>
-
-                        <!-- Product -->
-                        <div class="product">
-                            <div class="product_image"><img src="{{asset('Frontend/images/product_6.jpg')}}" alt=""></div>
-                            <div class="product_extra product_hot"><a href="categories.html">Hot</a></div>
-                            <div class="product_content">
-                                <div class="product_title"><a href="product.html">Smart Phone</a></div>
-                                <div class="product_price">$670</div>
-                            </div>
-                        </div>
-
-                        <!-- Product -->
-                        <div class="product">
-                            <div class="product_image"><img src="{{asset('Frontend/images/product_7.jpg')}}" alt=""></div>
-                            <div class="product_content">
-                                <div class="product_title"><a href="product.html">Smart Phone</a></div>
-                                <div class="product_price">$670</div>
-                            </div>
-                        </div>
-
-                        <!-- Product -->
-                        <div class="product">
-                            <div class="product_image"><img src="{{asset('Frontend/images/product_8.jpg')}}" alt=""></div>
-                            <div class="product_extra product_sale"><a href="categories.html">Hot</a></div>
-                            <div class="product_content">
-                                <div class="product_title"><a href="product.html">Smart Phone</a></div>
-                                <div class="product_price">$670</div>
-                            </div>
-                        </div>
-
+                        <div style="float:right; margin-top:-9%; background-color:transparent;"><sup><a href="#">View More</a></sup></div>
                     </div>
 
                 </div>
@@ -285,13 +196,14 @@
                     <div class="avds_xl_container clearfix">
                         <div class="avds_xl_background" style="background-image:url(http://localhost/teutonsDev/public/Frontend/images/about_us.jpg)"></div>
                         <div class="avds_xl_content" style="font-color:#e95a5a; width:82%;">
-                            <div class="avds_title">About Us</div>
+                            <div class="avds_title" style="float:right; margin-top:-5%; padding: 5%;">About Us</div>
+                            <br><br>
                             <div class="avds_text">
                                 <p style="color:#000;">Created by technology experts who are artistic and innovative.
                                     Specialized in high-end designing, a manufacturing and marketing innovative memory product is its sole purpose.
                                     All TEUTONS® product’s research-development & designed in Spain.
                                 </p></div>
-                            <div class="avds_link avds_xl_link"><a href="categories.html">See More</a></div>
+                           <!-- <div class="avds_link avds_xl_link"><a href="categories.html">See More</a></div> -->
 
                             </div>
                             <!--<div class="avds_link avds_xl_link"><a href="categories.html">See More</a></div>-->

@@ -20,7 +20,7 @@ Route::get('test', function () {
 });
 
 Route::get('/','FrontendController@index')->name('frontend');
-Route::get('products','Front\ProductController@details')->name('product.details');
+Route::get('products/{id}','Front\ProductController@details')->name('product.details');
 
 
 Route::get('admin/login','AdminLoginController@loginForm')->name('admin.login.form');
