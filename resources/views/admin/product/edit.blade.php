@@ -1,4 +1,8 @@
 @extends('layouts.backend.master')
+@section('csj')
+   <script src="//cdn.ckeditor.com/4.14.0/full/ckeditor.js"></script>
+   <!-- <script src="https://cdn.ckeditor.com/ckeditor5/18.0.0/classic/ckeditor.js"></script>-->
+@endsection
 @section('mainContent')
     <div class="row">
         <div class="col-lg-12 offset-0">
@@ -56,27 +60,17 @@
 
 
                         <label class="text-dark font-weight-medium" for="">Product Details</label>
-                        <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-														<span class="input-group-text">
-															<i class="mdi mdi-edit"></i>
-                                                        </span>
-                            </div>
-                        <!-- <input type="text" name="details" value="{{old('details')}}"  class="form-control" placeholder="Enter Product details" aria-label="details">-->
-                            <textarea name="description" required class="form-control" id="Product_description" cols="80" rows="5">{{$product->description}}</textarea>
-                        </div>
+                        <div>
 
+                            <textarea name="description" required class="form-control" id="Product_description"  rows="10" cols="80">{{$product->description}}</textarea>
+                        <!-- <input type="text" name="details" value="{{old('details')}}"  class="form-control" placeholder="Enter Product details" aria-label="details">-->
+                        </div>
+                        <br>
                         <label class="text-dark font-weight-medium" for="">Product Short Details</label>
-                        <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-														<span class="input-group-text">
-															<i class="mdi mdi-edit"></i>
-                                                        </span>
-                            </div>
+                        <div>
+                            <textarea name="short_description" class="" id="Product_short_description"  rows="10" cols="80">{{$product->short_description}}</textarea>
                         <!-- <input type="text" name="details" value="{{old('details')}}"  class="form-control" placeholder="Enter Product details" aria-label="details">-->
-                            <textarea name="short_description" class="form-control" id="Product_short_description" cols="120" rows="10">{{$product->short_description}}</textarea>
                         </div>
-
                         <label class="text-dark mb-2 mt-4 font-weight-medium d-inline-block mr-3" for="is_featured">Is Featured</label>
                         <ul class="list-unstyled list-inline">
                             <li class="d-inline-block mr-3">
@@ -202,5 +196,10 @@
             </div>
         </div>
     </div>
-
+    <script>
+        // Replace the <textarea id="editor1"> with a CKEditor
+        // instance, using default configuration.
+        CKEDITOR.replace( 'description' );
+        CKEDITOR.replace('short_description');
+    </script>
 @endsection

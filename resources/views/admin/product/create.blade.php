@@ -1,15 +1,7 @@
 @extends('layouts.backend.master')
 @section('csj')
-    <script src="https://cdn.tiny.cloud/1/edg1ry9kn8z5vkhjc572eauiiglzsmho9b6l8gjztmnbu7zf/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-    <style>
-        .mce-notification-inner {display:none!important;}
-    </style>
-
-    <!--script>
-        tinymce.init({
-           selector: 'textarea'
-        });
-    </script-->
+   <script src="//cdn.ckeditor.com/4.14.0/full/ckeditor.js"></script>
+   <!--<script src="https://cdn.ckeditor.com/ckeditor5/18.0.0/classic/ckeditor.js"></script>-->
 
 @endsection
 @section('mainContent')
@@ -68,28 +60,19 @@
 
 
                         <label class="text-dark font-weight-medium" for="">Product Details</label>
-                        <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-														<span class="input-group-text">
-															<i class="mdi mdi-edit"></i>
-                                                        </span>
-                            </div>
-                        <!-- <input type="text" name="details" value="{{old('details')}}"  class="form-control" placeholder="Enter Product details" aria-label="details">-->
-                            <textarea name="description" required class="form-control" id="Product_description" cols="120" rows="15">{{old('description')}}</textarea>
+                        <div>
+                             <!-- <input type="text" name="details" value="{{old('details')}}"  class="form-control" placeholder="Enter Product details" aria-label="details">-->
+                            <textarea name="description" required class="form-control" id="Product_description" cols="80" rows="10">{{old('description')}}</textarea>
                         </div>
+                        <br>
 
 
                         <label class="text-dark font-weight-medium" for="">Product Short Details</label>
-                        <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-														<span class="input-group-text">
-															<i class="mdi mdi-edit"></i>
-                                                        </span>
-                            </div>
-                        <!-- <input type="text" name="details" value="{{old('details')}}"  class="form-control" placeholder="Enter Product details" aria-label="details">-->
-                            <textarea name="short_description" required class="form-control" id="Product_short_description" cols="120" rows="10">{{old('description')}}</textarea>
+                        <div>
+                            <!-- <input type="text" name="details" value="{{old('details')}}"  class="form-control" placeholder="Enter Product details" aria-label="details">-->
+                            <textarea name="short_description" required class="form-control" id="Product_short_description" cols="80" rows="10">{{old('description')}}</textarea>
                         </div>
-
+                        <br>
 
                         <label class="text-dark mb-2 mt-4 font-weight-medium d-inline-block mr-3" for="is_featured">Is Featured</label>
                         <ul class="list-unstyled list-inline">
@@ -108,9 +91,6 @@
                                     <div class="control-indicator"></div>
                                 </label>
                             </li>
-
-
-
                         </ul>
 
                         <label class="text-dark mb-2 mt-4 font-weight-medium d-inline-block mr-3" for="is_new">Is New</label>
@@ -198,4 +178,10 @@
             </div>
         </div>
     </div>
+    <script>
+        // Replace the <textarea id="editor1"> with a CKEditor
+        // instance, using default configuration.
+        CKEDITOR.replace( 'description' );
+        CKEDITOR.replace('short_description');
+    </script>
 @endsection

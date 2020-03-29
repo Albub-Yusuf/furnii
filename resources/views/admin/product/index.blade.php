@@ -38,7 +38,7 @@
                     <tr>
                         <th scope="row">{{$serial++}}</th>
                         <td><img width="60px" height="60px" src="{{asset($product->featured_image)}}"></td>
-                        <td>{{$product->name}}</td>
+                        <td><a href="{{route('product.show',$product->id)}}">{{$product->name}}</a></td>
                         <td>
                             <span class="mb-2 mr-2 badge badge-pill  @if($product->status == 'active') badge-success @endif  @if($product->status == 'inactive') badge-danger @endif">{{$product->status}}</span>
                         </td>

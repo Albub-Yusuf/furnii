@@ -19,3 +19,18 @@
 <script src="{{asset('Backend/assets/js/map.js')}}"></script>
 <script src="{{asset('Backend/assets/js/custom.js')}}"></script>
 <script src="{{asset('Backend/assets/js/toastr.min.js')}}"></script>
+<!--Frontend JS-->
+
+<script src="{{asset('Frontend/js/jquery-3.2.1.min.js')}}"></script>
+<script src="{{asset('Frontend/styles/popper.js')}}"></script>
+<script src="{{asset('Frontend/styles/bootstrap.min.js')}}"></script>
+<script src="{{asset('Frontend/plugins/greensock/TweenMax.min.js')}}"></script>
+<script src="{{asset('Frontend/plugins/greensock/TimelineMax.min.js')}}"></script>
+<script src="{{asset('Frontend/plugins/scrollmagic/ScrollMagic.min.js')}}"></script>
+<script src="{{asset('Frontend/plugins/greensock/animation.gsap.min.js')}}"></script>
+<script src="{{asset('Frontend/plugins/greensock/ScrollToPlugin.min.js')}}"></script>
+<script src="{{asset('Frontend/plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
+<script src="{{asset('Frontend/plugins/Isotope/isotope.pkgd.min.js')}}"></script>
+<script src="{{asset('Frontend/plugins/easing/easing.js')}}"></script>
+<script src="{{asset('Frontend/plugins/parallax-js-master/parallax.min.js')}}"></script>
+<script src="{{asset('Frontend/js/product.js')}}"></script>

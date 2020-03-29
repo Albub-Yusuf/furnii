@@ -64,7 +64,6 @@ class ProductController extends Controller
             'status' => 'required',
             'images.*' => 'image'
         ]);
-
         $user = auth()->user();
         $product_image = $request->images;
 
@@ -113,7 +112,11 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        //dd($product);
+        $data['title'] = 'Product Details';
+        $data['categories'] = Category::orderBy('name')->pluck('name','id');
+        $data['productInfo'] = $product;
+        return view('admin.product.productDetails',$data);
     }
 
     /**
