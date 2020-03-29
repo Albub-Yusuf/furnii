@@ -12,4 +12,7 @@ class ProductController extends Controller
         $data['categories'] = Category::withoutTrashed()->get();
         return view('frontend.product.details',$data);
     }
+    public function productDetails($id){
+        dd($id);
+    }
 }

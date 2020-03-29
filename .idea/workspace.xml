@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="926319ea-4a9a-4005-9687-52d690a7a7c1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/product/productDetails.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Backend/assets/img/products/15853987901 f-wZ9utZonXNmBgVs_1DAA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Backend/assets/img/products/1585398790960x0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Backend/assets/img/products/1585398790Animal-Crossing-New-Horizons.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Front/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Front/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Backend/assets/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/Backend/assets/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/productDetails.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/productDetails.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/backend/_scripts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/backend/_scripts.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/backend/_stylesheet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/backend/_stylesheet.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/backend/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/backend/master.blade.php" afterDir="false" />
@@ -275,6 +270,10 @@
       <workItem from="1585461662014" duration="1793000" />
       <workItem from="1585463472143" duration="1455000" />
       <workItem from="1585465419391" duration="1371000" />
+      <workItem from="1585467528663" duration="1743000" />
+      <workItem from="1585469483380" duration="1601000" />
+      <workItem from="1585471342525" duration="810000" />
+      <workItem from="1585474337372" duration="1193000" />
     </task>
     <servers />
   </component>
@@ -295,20 +294,20 @@
     </state>
     <state x="499" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1585378638536" />
     <state x="499" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1585386800790" />
-    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1585461481758">
+    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1585474396980">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="567" y="214" key="FileChooserDialogImpl/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1585385932178" />
-    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585461481758" />
+    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585474396980" />
     <state x="604" y="344" key="NewPhpFileDialog" timestamp="1584509284109">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="604" y="344" key="NewPhpFileDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1584509284109" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1585463477333">
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1585474340406">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1585397780505" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585463477333" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585474340406" />
     <state x="425" y="66" width="672" height="676" key="search.everywhere.popup" timestamp="1584512512384">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

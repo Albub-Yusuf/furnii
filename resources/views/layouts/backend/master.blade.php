@@ -44,9 +44,9 @@
             </div>
         </div>
 
-       <!-- <footer class="footer mt-auto">
+     <footer class="footerr mt-auto">
             @include('layouts.backend._footer')
-        </footer>-->
+        </footer>
 
     </div>
 </div>

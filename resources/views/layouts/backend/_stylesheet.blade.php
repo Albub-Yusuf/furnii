@@ -19,15 +19,6 @@
 
 <!-- FAVICON -->
 <link href="{{ asset('Backend/assets/img/teutonsfavicon.png')}}" rel="shortcut icon" />
-
-
-<!--Frontend CSS For Testing-->
-<!--link rel="stylesheet" type="text/css" href="{{asset('Frontend/styles/bootstrap.min.css')}}"-->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<link href="{{asset('Frontend/plugins/font-awesome-4.7.0/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="{{asset('Frontend/styles/product.css')}}">
-<link rel="stylesheet" type="text/css" href="{{asset('Frontend/styles/product_responsive.css')}}">
-
 <!--
   HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
 -->
