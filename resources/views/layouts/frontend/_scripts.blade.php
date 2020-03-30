@@ -20,4 +20,5 @@
 <script src="{{asset('Frontend/plugins/Isotope/isotope.pkgd.min.js')}}"></script>
 <script src="{{asset('Frontend/plugins/easing/easing.js')}}"></script>
 <script src="{{asset('Frontend/plugins/parallax-js-master/parallax.min.js')}}"></script>
-<script src="{{asset('Frontend/js/custom.js')}}"></script>
+@yield('cjs')
+

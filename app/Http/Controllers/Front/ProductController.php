@@ -34,4 +34,11 @@ class ProductController extends Controller
         }
         return view('frontend.product.search',$data);
     }
+
+    public function productDetails($id){
+        $data['categories'] = Category::withoutTrashed()->get();
+        $data['product'] = Product::with('category','product_image')->findOrFail($id);
+        return view('frontend.product.productDetails',$data);
+;
+    }
 }

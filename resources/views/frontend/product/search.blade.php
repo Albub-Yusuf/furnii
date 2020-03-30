@@ -65,4 +65,7 @@
 
 
     </div>
+    @section('cjs')
+        <script src="{{asset('Frontend/js/custom.js')}}"></script>
+    @endsection
 @endsection
