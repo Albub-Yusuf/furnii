@@ -148,9 +148,9 @@
                         <!-- Product -->
                         @foreach($featured_products as $product)
                         <div class="product">
-                            <div class="product_image"><a href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt="Featured Product"></a></div>
+                            <div class="product_image"><a href="{{route('details',[$product->id,$product->category_id])}}"><img src="{{asset($product->featured_image)}}" alt="Featured Product"></a></div>
                             <div class="product_content">
-                                <div class="product_title text-sm-center" ><a href="{{route('details',$product->id)}}">{{$product->name}}</a></div>
+                                <div class="product_title text-sm-center" ><a href="{{route('details',[$product->id,$product->category_id])}}">{{$product->name}}</a></div>
                             </div>
                         </div>
                         @endforeach
@@ -178,10 +178,10 @@
                         <!-- Product -->
                         @foreach($latest_products as $product)
                         <div class="product">
-                            <div class="product_image"><a href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt=""></a></div>
+                            <div class="product_image"><a href="{{route('details',[$product->id,$product->category_id])}}"><img src="{{asset($product->featured_image)}}" alt=""></a></div>
                             <div class="product_extra product_new"><a href="#">New</a></div>
                             <div class="product_content">
-                                <div class="product_title text-sm-center"><a href="{{route('details',$product->id)}}">{{$product->name}}</a></div>
+                                <div class="product_title text-sm-center"><a href="{{route('details',[$product->id,$product->category_id])}}">{{$product->name}}</a></div>
 
                             </div>
                         </div>

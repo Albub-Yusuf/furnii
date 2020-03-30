@@ -144,7 +144,7 @@
         </div>
     </div>
 
-    <!-- Products -->
+    <!-- Related Products -->
 
     <div class="products">
         <div class="container">
@@ -157,44 +157,18 @@
                 <div class="col">
 
                     <div class="product_grid">
-
-                        <!-- Product -->
-
-                        <div class="product">
-                            <div class="product_image"><a href="#"><img src="{{asset('Frontend/images/s-gold.jpg')}}" alt=""></a></div>
-                            <div class="product_extra product_new"><a href="#">New</a></div>
-                            <div class="product_content">
-                                <div class="product_title"><a href="#">Simplicity Bluetooth Speaker</a></div>
-                            </div>
-                        </div>
-
-
-
+                    @foreach($relatedProducts as $product)
                         <!-- Product -->
                         <div class="product">
-                            <div class="product_image"><a href="#"><img src="{{asset('Frontend/images/S-pack.jpg')}}" alt=""></a></div>
-                            <div class="product_extra product_sale"><a href="#">Sale</a></div>
-                            <div class="product_content">
-                                <div class="product_title"><a href="#">Olite Bluetooth Speaker</a></div>
-                            </div>
-                        </div>
 
-                        <!-- Product -->
-                        <div class="product">
-                            <div class="product_image"><img src="{{asset('Frontend/images/Olite_Blue.jpg')}}" alt=""></div>
+                            <div class="product_image"><a href="{{route('details',[$product->id,$product->category_id])}}"><img src="{{asset($product->featured_image)}}" alt=""></a></div>
+                            <!--div class="product_extra product_new"><a href="#">New</a></div-->
                             <div class="product_content">
-                                <div class="product_title"><a href="#">Bluetooth Speaker</a></div>
+                                <div class="product_title text-center"><a href="{{route('details',[$product->id,$product->category_id])}}">{{$product->name}}</a></div>
                             </div>
-                        </div>
 
-                        <!-- Product -->
-                        <div class="product">
-                            <div class="product_image"><img src="{{asset('Frontend/images/Box_Blue.jpg')}}" alt=""></div>
-                            <div class="product_content">
-                                <div class="product_title"><a href="#">Bluetooth Wireless Speaker</a></div>
-                            </div>
                         </div>
-
+                        @endforeach
                     </div>
                 </div>
             </div>
