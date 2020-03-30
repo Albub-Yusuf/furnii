@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Product;
 use App\Productimage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -36,10 +37,16 @@ class ProductController extends Controller
         return view('frontend.product.search',$data);
     }
 
-    public function productDetails($id,$category_id){
+    public function productDetails($id){
         $data['categories'] = Category::withoutTrashed()->get();
         $data['product'] = Product::with('category','product_image')->findOrFail($id);
+        $cid = DB::table('products')->where('id', $id)->pluck('category_id');
+        $category_id = 0;
+        foreach ($cid as $c){
+            $category_id = $c;
+        }
         $data['relatedProducts'] =  Product::where('status','active')->where('category_id',$category_id)->orderBy('id','DESC')->limit(4)->get();
+        $data['flag'] = $id;
         return view('frontend.product.productDetails',$data);
     }
 }

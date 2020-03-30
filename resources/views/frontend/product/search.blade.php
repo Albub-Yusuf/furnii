@@ -27,9 +27,9 @@
                         <!-- Product -->
                         @foreach($products as $product)
                             <div class="product">
-                                <div class="product_image"><a href="{{route('product.details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt="Featured Product"></a></div>
+                                <div class="product_image"><a href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt="Featured Product"></a></div>
                                 <div class="product_content">
-                                    <div class="product_title text-sm-center" ><a href="{{route('product.details',$product->id)}}">{{$product->name}}</a></div>
+                                    <div class="product_title text-sm-center" ><a href="{{route('details',$product->id)}}">{{$product->name}}</a></div>
                                 </div>
                             </div>
                         @endforeach
