@@ -63,7 +63,7 @@
                 <div class="search_panel_content d-flex flex-row align-items-center justify-content-end">
                     <form action="{{route('product.search')}}" method="get">
                         <input type="text" class="search_input" style="display: inline-block;" name="search" placeholder="Search" required="required">
-                        <button class="btn btn-sm btn-secondary" type="submit" style="display: inline-block;">Search</button>
+                        <!--<button class="btn btn-sm btn-secondary" type="submit" style="display: inline-block;">Search</button>-->
                     </form>
                 </div>
             </div>

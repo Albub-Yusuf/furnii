@@ -25,14 +25,13 @@ class ProductController extends Controller
             $product = $product->where('name','like','%'.$request->search.'%');
         }
 
-        $product = $product->orderBy('id','DESC')->paginate(3);
+        $product = $product->orderBy('id','DESC')->paginate(6);
         $data['products'] = $product;
 
         if(isset($request->search)){
             $render['search'] = $request->search;
             $product = $product->appends($render);
         }
-        $data['serial'] = managePagination($product);
         return view('frontend.product.search',$data);
     }
 }

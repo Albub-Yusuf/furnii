@@ -34,7 +34,13 @@
                             </div>
                         @endforeach
 
-                        @if(count($products) == 0) <div class="row"><div class="col-md-12 text-center" style="margin:0 auto"> <h3 style="margin: 0 auto;"> No Result Found!! </h3> </div></div> @endif
+                        @if(count($products) == 0)
+                            <div class="row">
+                                <div class="col-md-12 text-center" style="margin:0 auto">
+                                    <h3 style="margin: 0 auto;"> No Result Found!! </h3>
+                                </div>
+                            </div>
+                        @endif
 
                     </div>
 
@@ -42,10 +48,18 @@
             </div>
 
             <div class="row">
-
-                <div class="pagination border-separted" style="margin:0 auto;">
-                    {{$products->render()}}
+                <div class="col-md-8">
+                    <div style="float:right;">
+                        {{$products->render()}}
+                    </div>
                 </div>
+                <div class="col-md-4" style="float:right;">
+                    <div class="text-sm" style="float:right;">
+                       <sup>Showing {{ $products->firstItem() }} to {{ $products->lastItem() }}  of {{$products->total()}} results.</sup>
+                    </div>
+
+                </div>
+
             </div>
         </div>
 
