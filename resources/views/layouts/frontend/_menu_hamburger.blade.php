@@ -8,10 +8,10 @@
         </div>
         <ul class="page_menu_nav menu_mm">
             <li class="page_menu_item has-children menu_mm">
-                <a href="index.html">Home<i class="fa fa-angle-down"></i></a>
+                <a href="#">Home<i class="fa fa-angle-down"></i></a>
                 <ul class="page_menu_selection menu_mm">
                     <li class="page_menu_item menu_mm"><a href="categories.html">About Us<i class="fa fa-angle-down"></i></a></li>
-                    <li class="page_menu_item menu_mm"><a href="product.html">Product<i class="fa fa-angle-down"></i></a></li>
+                    <li class="page_menu_item menu_mm"><a href="product.html">Products<i class="fa fa-angle-down"></i></a></li>
                     <li class="page_menu_item menu_mm"><a href="cart.html">Cart<i class="fa fa-angle-down"></i></a></li>
                     <li class="page_menu_item menu_mm"><a href="checkout.html">Checkout<i class="fa fa-angle-down"></i></a></li>
                     <li class="page_menu_item menu_mm"><a href="contact.html">Contact<i class="fa fa-angle-down"></i></a></li>
@@ -23,10 +23,9 @@
             <li class="page_menu_item has-children menu_mm">
                 <a href="categories.html">Products<i class="fa fa-angle-down"></i></a>
                 <ul class="page_menu_selection menu_mm">
-                    <li class="page_menu_item menu_mm"><a href="categories.html">USB Flash Drive<i class="fa fa-angle-down"></i></a></li>
-                    <li class="page_menu_item menu_mm"><a href="categories.html">SSD<i class="fa fa-angle-down"></i></a></li>
-                    <li class="page_menu_item menu_mm"><a href="categories.html">RAM<i class="fa fa-angle-down"></i></a></li>
-                    <li class="page_menu_item menu_mm"><a href="categories.html">Cable<i class="fa fa-angle-down"></i></a></li>
+                    @foreach($categories as $category)
+                    <li class="page_menu_item menu_mm"><a href="#">{{$category->name}}<i class="fa fa-angle-down"></i></a></li>
+                    @endforeach
                 </ul>
             </li>
 

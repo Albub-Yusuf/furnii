@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="926319ea-4a9a-4005-9687-52d690a7a7c1" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/frontend/_head.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Front/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Front/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontendController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontendController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/images/home_slider_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Frontend/images/home_slider_1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Frontend/styles/product.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/Frontend/styles/product.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/product/details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/product/details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/frontend/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/frontend/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/frontend/_menu_hamburger.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/frontend/_menu_hamburger.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/frontend/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/frontend/master.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,7 +281,14 @@
       <workItem from="1585480462887" duration="1791000" />
       <workItem from="1585482278525" duration="1803000" />
       <workItem from="1585484100063" duration="1828000" />
-      <workItem from="1585486486525" duration="261000" />
+      <workItem from="1585486486525" duration="898000" />
+      <workItem from="1585540290726" duration="1299000" />
+      <workItem from="1585542445689" duration="1894000" />
+      <workItem from="1585544535086" duration="1781000" />
+      <workItem from="1585546448479" duration="1724000" />
+      <workItem from="1585548265482" duration="1793000" />
+      <workItem from="1585550074592" duration="1798000" />
+      <workItem from="1585551885085" duration="377000" />
     </task>
     <servers />
   </component>
@@ -310,25 +318,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="604" y="344" key="NewPhpFileDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1584509284109" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1585486507667">
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1585551885202">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1585397780505" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585486507667" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1585542446977" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585551885202" />
     <state x="425" y="66" width="672" height="676" key="search.everywhere.popup" timestamp="1584512512384">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="66" width="672" height="676" key="search.everywhere.popup/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1584512512384" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/frontend/product/details.blade.php</url>
-          <line>25</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

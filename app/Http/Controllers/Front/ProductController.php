@@ -13,10 +13,8 @@ class ProductController extends Controller
     public function details($id){
         //dd($id);
         $data['product'] = Product::with('category','product_image')->findOrFail($id);
-       // $data['categories'] = Category::withoutTrashed()->get();
-        //$data['productInfo'] = Product::where('id',$id)->get();
-        //$data['productInfo'] = Product::with(['category','product_image'])->where('id',$id)->where('status','active')->get();
-       return view('frontend.product.details',$data);
+        $data['categories'] = Category::withoutTrashed()->get();
+        return view('frontend.product.details',$data);
     }
     public function productDetails($id){
         dd($id);

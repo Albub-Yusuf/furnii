@@ -11,12 +11,12 @@
                             </li>
                             <li><a href="#">About Us</a></li>
                             <li class="hassubs">
-                                <a href="categories.html">products</a>
+                                <a href="#">products</a>
                                 <ul>
                                     @foreach($categories as $category)
                                         @if($category->status == 'active')
-                                        <li><a href="#">{{$category->name}}</a></li>
-                                        <hr>
+                                        <li class="text-sm-center"><a href="#">{{$category->name}}</a></li>
+                                           <!-- <hr> -->
                                         @endif
                                     @endforeach
                                 </ul>
