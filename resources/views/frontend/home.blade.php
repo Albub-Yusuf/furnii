@@ -154,7 +154,7 @@
                             </div>
                         </div>
                         @endforeach
-                       <div style="float:right; margin-top:-9%; background-color:transparent;"><sup><a href="#">View More</a></sup></div>
+                       <div style="float:right; margin-top:-9%; background-color:transparent;"><sup><a href="{{route('is_featured',$product->is_featured)}}">View More</a></sup></div>
 
                     </div>
 
@@ -187,7 +187,7 @@
                         </div>
                         @endforeach
 
-                        <div style="float:right; margin-top:-9%; background-color:transparent;"><sup><a href="#">View More</a></sup></div>
+                        <div style="float:right; margin-top:-9%; background-color:transparent;"><sup><a href="{{route('is_new',$product->is_new)}}">View More</a></sup></div>
                     </div>
 
                 </div>

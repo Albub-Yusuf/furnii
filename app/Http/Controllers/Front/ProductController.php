@@ -49,4 +49,18 @@ class ProductController extends Controller
         $data['flag'] = $id;
         return view('frontend.product.productDetails',$data);
     }
+    public function featuredProducts($status){
+
+        $data['categories'] = Category::withoutTrashed()->get();
+        $data['featured_products'] = Product::where('status','active')->where('is_featured',$status)->orderBy('id','DESC')->paginate(10);
+        return view('frontend.product.featuredProducts',$data);
+    }
+
+    public function latestProducts($status){
+
+        $data['categories'] = Category::withoutTrashed()->get();
+        $data['latest_products'] = Product::where('status','active')->where('is_new',$status)->orderBy('id','DESC')->paginate(10);
+        return view('frontend.product.latestProducts',$data);
+
+    }
 }

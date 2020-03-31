@@ -23,6 +23,9 @@ Route::get('/','FrontendController@index')->name('frontend');
 Route::get('products/{id}','Front\ProductController@details')->name('product.details');
 Route::get('/search','Front\ProductController@sresults')->name('product.search');
 Route::get('frontend/product/{id}','Front\ProductController@productDetails')->name('details');
+Route::get('featured/products/{is_featured}','Front\ProductController@featuredProducts')->name('is_featured');
+Route::get('latest/products/{is_new}','Front\ProductController@latestProducts')->name('is_new');
+
 
 
 Route::get('admin/login','AdminLoginController@loginForm')->name('admin.login.form');
