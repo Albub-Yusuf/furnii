@@ -15,7 +15,7 @@
                                 <ul>
                                     @foreach($categories as $category)
                                         @if($category->status == 'active')
-                                        <li class="text-sm-center"><a href="#">{{$category->name}}</a></li>
+                                        <li class="text-sm-center"><a href="{{route('category.products',$category->id)}}">{{$category->name}}</a></li>
                                            <!-- <hr> -->
                                         @endif
                                     @endforeach

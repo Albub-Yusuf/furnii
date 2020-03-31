@@ -13,7 +13,6 @@ class ProductController extends Controller
 {
 
     public function details($id){
-        //dd($id);
         $data['product'] = Product::with('category','product_image')->findOrFail($id);
         $data['categories'] = Category::withoutTrashed()->get();
         return view('frontend.product.details',$data);
@@ -61,6 +60,19 @@ class ProductController extends Controller
         $data['categories'] = Category::withoutTrashed()->get();
         $data['latest_products'] = Product::where('status','active')->where('is_new',$status)->orderBy('id','DESC')->paginate(10);
         return view('frontend.product.latestProducts',$data);
+
+    }
+
+    public function categoryProducts($cat_id){
+        $cid = DB::table('categories')->where('id', $cat_id)->pluck('name');
+        $category= "";
+        foreach ($cid as $c){
+            $category = $c;
+        }
+        $data['category'] = $category;
+        $data['categories'] = Category::withoutTrashed()->get();
+        $data['products'] = Product::with('category')->where('status','active')->where('category_id',$cat_id)->orderBy('id','DESC')->paginate(10);
+        return view('frontend.product.categoryProducts',$data);
 
     }
 }

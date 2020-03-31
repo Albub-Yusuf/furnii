@@ -135,9 +135,9 @@
     <div class="products">
         <div class="container">
             <div class="row">
-                <div class="col-md-3" style="text-align:center;"><h5>Featured Products</h5></div>
                 <div class="col-md-4" style="max-height:1px;background-color:lightslategrey;float:left;"></div>
-                <div class="col-md-5" style=" max-height:1px; background-color:#00aced;float:right;"></div>
+                <div class="col-md-4" style="text-align:center;"><h5>Featured Products</h5></div>
+                <div class="col-md-4" style=" max-height:1px; background-color:#00aced;float:right;"></div>
                </div>
 
             <br><br><br>
@@ -165,9 +165,9 @@
         <!--test modify here-->
         <div class="container">
             <div class="row">
-                <div class="col-md-2" style="text-align:center;"><h5>New Products</h5></div>
-                <div class="col-md-5" style="max-height:1px;background-color:lightslategrey;float:left;"></div>
-                <div class="col-md-5" style=" max-height:1px; background-color:#00aced;float:right;"></div>
+                <div class="col-md-4" style="max-height:1px;background-color:lightslategrey;float:left;"></div>
+                <div class="col-md-4" style="text-align:center;"><h5>Latest Products</h5></div>
+                <div class="col-md-4" style=" max-height:1px; background-color:#00aced;float:right;"></div>
             </div>
 
             <br><br><br>

@@ -16,7 +16,7 @@
             <br><br><br>
             <div class="row">
                 <div class="col-md-4" style="max-height:1px;background-color:lightslategrey;float:left;"></div>
-                <div class="col-md-4" style="text-align:center;"><h5>Featured Products</h5></div>
+                <div class="col-md-4" style="text-align:center;"><h5>{{$category}}</h5></div>
                 <div class="col-md-4" style=" max-height:1px; background-color:#00aced;float:right;"></div>
             </div>
 
@@ -26,7 +26,7 @@
 
                     <div class="product_grid">
                         <!-- Product -->
-                        @foreach($featured_products as $product)
+                        @foreach($products as $product)
                             <div class="product">
                                 <div class="product_image"><a href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt="Featured Product"></a></div>
                                 <div class="product_content">
@@ -35,7 +35,7 @@
                             </div>
                         @endforeach
 
-                        @if(count($featured_products) == 0)
+                        @if(count($products) == 0)
                             <div class="row">
                                 <div class="col-md-12 text-center" style="margin:0 auto">
                                     <h3 style="margin: 0 auto;"> No Products Found!! </h3>
@@ -51,12 +51,12 @@
             <div class="row">
                 <div class="col-md-8">
                     <div style="float:right;">
-                        {{$featured_products->render()}}
+                        {{$products->render()}}
                     </div>
                 </div>
                 <div class="col-md-4" style="float:right;">
                     <div class="text-sm" style="float:right;">
-                        <sup>Showing {{ $featured_products->firstItem() }} to {{ $featured_products->lastItem() }}  of {{$featured_products->total()}} results.</sup>
+                        <sup>Showing {{ $products->firstItem() }} to {{ $products->lastItem() }}  of {{$products->total()}} results.</sup>
                     </div>
 
                 </div>
