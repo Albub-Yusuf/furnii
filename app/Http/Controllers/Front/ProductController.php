@@ -12,28 +12,44 @@ use Illuminate\Support\Facades\DB;
 class ProductController extends Controller
 {
 
+  
     public function details($id){
         $data['product'] = Product::with('category','product_image')->findOrFail($id);
         $data['categories'] = Category::withoutTrashed()->get();
         return view('frontend.product.details',$data);
     }
     public function sresults(Request $request){
+
+       $query = $request->search;
+
+        $category_name = DB::table('categories')->where('name', $query)->pluck('id');
+        $category_id= 0;
+        foreach ($category_name as $cid){
+            $category_id = $cid;
+        }
         $product = new Product();
         $product = $product->withoutTrashed();
         $data['categories'] = Category::withoutTrashed()->get();
 
-        if($request->has('search') && ($request->search !=null)){
-            $product = $product->where('name','like','%'.$request->search.'%');
+        if($category_id == 0){
+
+            if($request->has('search') && ($request->search !=null)){
+                $product = $product->where('name','like','%'.$request->search.'%');
+            }
+
+            $product = $product->orderBy('id','DESC')->paginate(4);
+            $data['products'] = $product;
+
+            if(isset($request->search)){
+                $render['search'] = $request->search;
+                $product = $product->appends($render);
+            }
+            return view('frontend.product.search',$data);
+        }
+        if($category_id !=0){
+           return $this->categoryProducts($category_id);
         }
 
-        $product = $product->orderBy('id','DESC')->paginate(4);
-        $data['products'] = $product;
-
-        if(isset($request->search)){
-            $render['search'] = $request->search;
-            $product = $product->appends($render);
-        }
-        return view('frontend.product.search',$data);
     }
 
     public function productDetails($id){
