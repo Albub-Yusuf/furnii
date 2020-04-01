@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="926319ea-4a9a-4005-9687-52d690a7a7c1" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/frontend/aboutUs.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Front/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Front/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontendController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontendController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/frontend/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/frontend/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,7 +300,8 @@
       <workItem from="1585638530324" duration="1774000" />
       <workItem from="1585641002918" duration="1795000" />
       <workItem from="1585642821217" duration="1800000" />
-      <workItem from="1585649314495" duration="1463000" />
+      <workItem from="1585649314495" duration="2052000" />
+      <workItem from="1585716220953" duration="1940000" />
     </task>
     <servers />
   </component>
@@ -318,6 +322,10 @@
     </state>
     <state x="499" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1585378638536" />
     <state x="499" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1585386800790" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1585717017980">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1585717017980" />
     <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1585474396980">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -327,11 +335,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="604" y="344" key="NewPhpFileDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1584509284109" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1585649314472">
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1585716221304">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1585649314472" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585572278507" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585716221304" />
     <state x="427" y="105" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585553699262">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

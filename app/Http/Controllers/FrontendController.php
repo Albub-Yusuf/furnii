@@ -17,4 +17,8 @@ class FrontendController extends Controller
        //dd($data);
        return view('frontend.home',$data);
    }
+   public function aboutUs(){
+       $data['categories'] = Category::withoutTrashed()->get();
+       return view('frontend.aboutUs',$data);
+   }
 }

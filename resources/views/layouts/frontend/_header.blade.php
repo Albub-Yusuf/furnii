@@ -9,7 +9,7 @@
                             <li class="hassub">
                                 <a href="{{route('frontend')}}">Home</a>
                             </li>
-                            <li><a href="#">About Us</a></li>
+                            <li><a href="{{route('about_us')}}">About Us</a></li>
                             <li class="hassubs">
                                 <a href="#">products</a>
                                 <ul>

@@ -26,6 +26,7 @@ Route::get('frontend/product/{id}','Front\ProductController@productDetails')->na
 Route::get('featured/products/{is_featured}','Front\ProductController@featuredProducts')->name('is_featured');
 Route::get('latest/products/{is_new}','Front\ProductController@latestProducts')->name('is_new');
 Route::get('category/products/{cat_id}','Front\ProductController@categoryProducts')->name('category.products');
+Route::get('about-us/','FrontendController@aboutUs')->name('about_us');
 
 
 
