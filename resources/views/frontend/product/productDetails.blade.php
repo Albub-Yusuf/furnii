@@ -40,7 +40,7 @@
                 <!-- Product Image -->
                 <div class="col-lg-6">
                     <div class="details_image">
-                        <div class="details_image_large"><img src="{{asset($product->featured_image)}}" alt="">@if($product->is_new==1) <div class="product_extra product_new"><a href="#">New</a></div> @endif</div>
+                        <div class="details_image_large"><img src="{{asset($product->featured_image)}}" alt="">@if($product->is_new==1) <div class="product_extra product_new"><a style="text-decoration:none;" href="#">New</a></div> @endif</div>
                         <div class="details_image_thumbnails d-flex flex-row align-items-start">
                             <div class="details_image_thumbnails d-flex flex-row align-items-start justify-content-between">
                                 <div class="details_image_thumbnail active" data-image="{{URL::asset($product->featured_image)}}"><img src="{{URL::asset($product->featured_image)}}" alt=""></div>
@@ -87,10 +87,10 @@
                                     <div class="col-md-8">
                                         <nav>
                                             <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Description</a>
-                                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Specification</a>
+                                                <a style="text-decoration:none;" class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Description</a>
+                                                <a style="text-decoration:none;" class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Specification</a>
 
-                                                <a class="nav-item nav-link" id="nav-review-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="false">Reviews</a>
+                                                <a style="text-decoration:none;" class="nav-item nav-link" id="nav-review-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="false">Reviews</a>
 
                                             </div>
                                         </nav>
@@ -161,10 +161,10 @@
                         @if($product->id != $flag)
                         <!-- Product -->
                         <div class="product">
-                            <div class="product_image"><a href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt=""></a></div>
-                            <!--div class="product_extra product_new"><a href="#">New</a></div-->
+                            <div class="product_image"><a style="text-decoration:none;" href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt=""></a></div>
+                            <!--div class="product_extra product_new"><a style="text-decoration:none;" href="#">New</a></div-->
                             <div class="product_content">
-                                <div class="product_title text-center"><a href="{{route('details',$product->id)}}">{{$product->name}}</a></div>
+                                <div class="product_title text-center"><a style="text-decoration:none;" href="{{route('details',$product->id)}}">{{$product->name}}</a></div>
                             </div>
                         </div>
                         @endif

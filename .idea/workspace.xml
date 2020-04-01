@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="926319ea-4a9a-4005-9687-52d690a7a7c1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/aboutUs.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontendController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontendController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Frontend/styles/main_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/Frontend/styles/main_styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/product/categoryProducts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/product/categoryProducts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/product/featuredProducts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/product/featuredProducts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/product/latestProducts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/product/latestProducts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/product/productDetails.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/product/productDetails.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/product/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/product/search.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/frontend/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/frontend/_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,6 +306,8 @@
       <workItem from="1585642821217" duration="1800000" />
       <workItem from="1585649314495" duration="2052000" />
       <workItem from="1585716220953" duration="1940000" />
+      <workItem from="1585718549089" duration="1621000" />
+      <workItem from="1585720452012" duration="407000" />
     </task>
     <servers />
   </component>
@@ -335,11 +341,15 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="604" y="344" key="NewPhpFileDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1584509284109" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1585716221304">
+    <state width="509" height="446" key="SwitcherDM" timestamp="1585719699243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="509" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1585719699243" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1585720452303">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1585649314472" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585716221304" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585720452303" />
     <state x="427" y="105" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585553699262">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -28,7 +28,7 @@
                                     <div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
                                         <div class="home_slider_title">A new Online Shop experience.</div>
                                         <div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</div>
-                                        <div class="button button_light home_button"><a href="#">Visit Now</a></div>
+                                        <div class="button button_light home_button"><a style="text-decoration:none;" href="#">Visit Now</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -46,7 +46,7 @@
                                     <div style="float:right;"class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
                                         <div class="home_slider_title">A new Online Shop experience.</div>
                                         <!--div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</div>-->
-                                        <div class="button button_light home_button"><a href="#">Visit Now</a></div>
+                                        <div class="button button_light home_button"><a style="text-decoration:none;" href="#">Visit Now</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -64,7 +64,7 @@
                                     <div style="float:right;" class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
                                         <div style="color:#000;" class="home_slider_title" data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">A new Online Shop experience.</div>
                                        <!-- <div style="color:#000;" class="home_slider_subtitle" data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</div> -->
-                                        <div  style="color:#000;" class="button button_light home_button" data-animation-in="fadeIn" data-animation-out="animate-out fadeOut"><a style="color:#000;" href="#">Visit Now</a></div>
+                                        <div  style="color:#000;" class="button button_light home_button" data-animation-in="fadeIn" data-animation-out="animate-out fadeOut"><a style="text-decoration:none;" style="color:#000;" href="#">Visit Now</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -113,7 +113,7 @@
                     </div>
                     <div class="avds_small_content" style="color:#fff;">
                         <div class="avds_title" style="color:#fff;">Smart Phones</div>
-                        <div class="avds_link"><a href="#" style="color:#fff;">See More</a></div>
+                        <div class="avds_link"><a style="text-decoration:none;" href="#" style="color:#fff;">See More</a></div>
                     </div>
                 </div>
             </div>
@@ -123,7 +123,7 @@
                     <div class="avds_large_content">
                         <div class="avds_title" style="color:#fff;">Professional Cameras</div>
                         <div class="avds_text" style="color:#fff;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viver ra velit venenatis fermentum luctus.</div>
-                        <div class="avds_link avds_link_large" style="color:#fff;"><a style="color:#fff;" href="categories.html">See More</a></div>
+                        <div class="avds_link avds_link_large" style="color:#fff;"><a style="text-decoration:none;" style="color:#fff;" href="categories.html">See More</a></div>
                     </div>
                 </div>
             </div>
@@ -148,13 +148,13 @@
                         <!-- Product -->
                         @foreach($featured_products as $product)
                         <div class="product">
-                            <div class="product_image"><a href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt="Featured Product"></a></div>
+                            <div class="product_image"><a style="text-decoration:none;" href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt="Featured Product"></a></div>
                             <div class="product_content">
-                                <div class="product_title text-sm-center" ><a href="{{route('details',$product->id)}}">{{$product->name}}</a></div>
+                                <div class="product_title text-sm-center" ><a style="text-decoration:none;" href="{{route('details',$product->id)}}">{{$product->name}}</a></div>
                             </div>
                         </div>
                         @endforeach
-                       <div style="float:right; margin-top:-9%; background-color:transparent;"><sup><a href="{{route('is_featured',$product->is_featured)}}">View More</a></sup></div>
+                       <div style="float:right; margin-top:-9%; background-color:transparent;"><sup><a style="text-decoration:none;" href="{{route('is_featured',$product->is_featured)}}">View More</a></sup></div>
 
                     </div>
 
@@ -178,16 +178,16 @@
                         <!-- Product -->
                         @foreach($latest_products as $product)
                         <div class="product">
-                            <div class="product_image"><a href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt=""></a></div>
-                            <div class="product_extra product_new"><a href="#">New</a></div>
+                            <div class="product_image"><a style="text-decoration:none;" href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt=""></a></div>
+                            <div class="product_extra product_new"><a style="text-decoration:none;" href="#">New</a></div>
                             <div class="product_content">
-                                <div class="product_title text-sm-center"><a href="{{route('details',$product->id)}}">{{$product->name}}</a></div>
+                                <div class="product_title text-sm-center"><a style="text-decoration:none;" href="{{route('details',$product->id)}}">{{$product->name}}</a></div>
 
                             </div>
                         </div>
                         @endforeach
 
-                        <div style="float:right; margin-top:-9%; background-color:transparent;"><sup><a href="{{route('is_new',$product->is_new)}}">View More</a></sup></div>
+                        <div style="float:right; margin-top:-9%; background-color:transparent;"><sup><a style="text-decoration:none;" href="{{route('is_new',$product->is_new)}}">View More</a></sup></div>
                     </div>
 
                 </div>
@@ -211,10 +211,10 @@
                                     Specialized in high-end designing, a manufacturing and marketing innovative memory product is its sole purpose.
                                     All TEUTONS® product’s research-development & designed in Spain.
                                 </p></div>
-                           <!-- <div class="avds_link avds_xl_link"><a href="categories.html">See More</a></div> -->
+                           <!-- <div class="avds_link avds_xl_link"><a style="text-decoration:none;" href="categories.html">See More</a></div> -->
 
                             </div>
-                            <!--<div class="avds_link avds_xl_link"><a href="categories.html">See More</a></div>-->
+                            <!--<div class="avds_link avds_xl_link"><a style="text-decoration:none;" href="categories.html">See More</a></div>-->
                         </div>
                     </div>
                 </div>

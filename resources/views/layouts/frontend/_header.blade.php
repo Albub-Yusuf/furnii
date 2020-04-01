@@ -3,26 +3,26 @@
         <div class="row">
             <div class="col">
                 <div class="header_content d-flex flex-row align-items-center justify-content-start">
-                    <div class="logo"><a href="http://teutons.com.de/"><img class="img" src="{{asset('Frontend/images/Logo-128.png')}}"></a><a href="#"></a></div>
+                    <div class="logo"><a style="text-decoration:none;" href="http://teutons.com.de/"><img class="img" src="{{asset('Frontend/images/Logo-128.png')}}"></a><a style="text-decoration:none;" href="#"></a></div>
                     <nav class="main_nav">
                         <ul>
                             <li class="hassub">
-                                <a href="{{route('frontend')}}">Home</a>
+                                <a style="text-decoration:none;" style="text-decoration:none;" href="{{route('frontend')}}">Home</a>
                             </li>
-                            <li><a href="{{route('about_us')}}">About Us</a></li>
+                            <li><a style="text-decoration:none;" href="{{route('about_us')}}">About Us</a></li>
                             <li class="hassubs">
-                                <a href="#">products</a>
+                                <a style="text-decoration:none;" href="#">products</a>
                                 <ul>
                                     @foreach($categories as $category)
                                         @if($category->status == 'active')
-                                        <li class="text-sm-center"><a href="{{route('category.products',$category->id)}}">{{$category->name}}</a></li>
+                                        <li class="text-sm-center"><a style="text-decoration:none;" href="{{route('category.products',$category->id)}}">{{$category->name}}</a></li>
                                            <!-- <hr> -->
                                         @endif
                                     @endforeach
                                 </ul>
                             </li>
-                            <li><a href="#">News & Events</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a style="text-decoration:none;" href="#">News & Events</a></li>
+                            <li><a style="text-decoration:none;" href="contact.html">Contact Us</a></li>
                         </ul>
                     </nav>
                     <div class="header_extra ml-auto">
@@ -74,9 +74,9 @@
 <!-- Social -->
 <div class="header_social">
     <ul>
-        <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a style="text-decoration:none;" href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+        <li><a style="text-decoration:none;" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a style="text-decoration:none;" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a style="text-decoration:none;" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
     </ul>
 </div>
