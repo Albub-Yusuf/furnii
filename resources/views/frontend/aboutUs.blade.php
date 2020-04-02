@@ -78,9 +78,9 @@
     </div>
     <br><br><br><br><br><br>
 
-
 @section('cjs')
     <script src="{{asset('Frontend/js/custom.js')}}"></script>
 @endsection
+
 @endsection
 

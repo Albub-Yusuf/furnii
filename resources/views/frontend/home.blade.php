@@ -148,7 +148,10 @@
                         <!-- Product -->
                         @foreach($featured_products as $product)
                         <div class="product">
-                            <div class="product_image"><a style="text-decoration:none;" href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt="Featured Product"></a></div>
+                            <div style=" width: 255px; height: 255px;">
+                                <div class="product_image"><a style="text-decoration:none;" href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt="Featured Product"></a></div>
+
+                            </div>
                             <div class="product_content">
                                 <div class="product_title text-sm-center" ><a style="text-decoration:none;" href="{{route('details',$product->id)}}">{{$product->name}}</a></div>
                             </div>
@@ -178,7 +181,7 @@
                         <!-- Product -->
                         @foreach($latest_products as $product)
                         <div class="product">
-                            <div class="product_image"><a style="text-decoration:none;" href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt=""></a></div>
+                          <div class="product_image"><a style="text-decoration:none;" href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt=""></a></div>
                             <div class="product_extra product_new"><a style="text-decoration:none;" href="#">New</a></div>
                             <div class="product_content">
                                 <div class="product_title text-sm-center"><a style="text-decoration:none;" href="{{route('details',$product->id)}}">{{$product->name}}</a></div>
@@ -206,7 +209,7 @@
                         <div class="avds_xl_content" style="font-color:#e95a5a; width:82%;">
                             <div class="avds_title" style="float:right; margin-top:-5%; padding: 5%;">About Us</div>
                             <br><br>
-                            <div class="avds_text">
+                            <div class="avds_text col-md-12 col-sm-12 col-lg-12">
                                 <p style="color:#000;">Created by technology experts who are artistic and innovative.
                                     Specialized in high-end designing, a manufacturing and marketing innovative memory product is its sole purpose.
                                     All TEUTONS® product’s research-development & designed in Spain.

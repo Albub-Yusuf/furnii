@@ -3,14 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="926319ea-4a9a-4005-9687-52d690a7a7c1" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Frontend/styles/main_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/Frontend/styles/main_styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/aboutUs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/aboutUs.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/product/categoryProducts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/product/categoryProducts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/product/featuredProducts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/product/featuredProducts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/product/latestProducts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/product/latestProducts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/product/productDetails.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/product/productDetails.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/product/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/product/search.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/frontend/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/frontend/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/frontend/_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/frontend/_footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/frontend/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/frontend/master.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -307,7 +304,18 @@
       <workItem from="1585649314495" duration="2052000" />
       <workItem from="1585716220953" duration="1940000" />
       <workItem from="1585718549089" duration="1621000" />
-      <workItem from="1585720452012" duration="407000" />
+      <workItem from="1585720452012" duration="1795000" />
+      <workItem from="1585722280123" duration="1927000" />
+      <workItem from="1585724269675" duration="1775000" />
+      <workItem from="1585726183082" duration="1775000" />
+      <workItem from="1585752494234" duration="669000" />
+      <workItem from="1585756314234" duration="1816000" />
+      <workItem from="1585760343110" duration="1577000" />
+      <workItem from="1585762255523" duration="1372000" />
+      <workItem from="1585799472093" duration="188000" />
+      <workItem from="1585806963882" duration="1639000" />
+      <workItem from="1585808787221" duration="952000" />
+      <workItem from="1585809771271" duration="39000" />
     </task>
     <servers />
   </component>
@@ -345,11 +353,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="509" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1585719699243" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1585720452303">
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1585809771933">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1585649314472" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585720452303" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1585809771933" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585726183139" />
     <state x="427" y="105" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585553699262">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

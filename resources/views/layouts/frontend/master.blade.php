@@ -35,7 +35,10 @@
 
     <!--New Footer Design -->
     <div class="row">
-        @include('layouts.frontend._footer')
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            @include('layouts.frontend._footer')
+        </div>
+
     </div>
 
 
