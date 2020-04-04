@@ -44,7 +44,7 @@
                                         <a href="#"><img class="rounded-circle w-45" src="{{asset($image)}}" alt="admin image"></a>
                                     </div>
                                     <div class="media-body align-self-center col-lg-3">
-                                        <a href="#">{{$user->name}}</a><br>
+                                        <a href="{{route('user.show',$user->id)}}">{{$user->name}}</a><br>
                                         <small>{{$user->email}}</small>
 
                                     </div>

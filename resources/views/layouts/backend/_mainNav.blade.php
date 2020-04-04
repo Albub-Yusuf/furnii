@@ -134,12 +134,12 @@
 
                             <li >
                                 <a class="sidenav-item-link" href="#">
-                                    <span class="nav-text">Edit Account</span>
+                                    <span class="nav-text">Add Banner</span>
                                 </a>
                             </li>
                             <li >
                                 <a class="sidenav-item-link" href="#">
-                                    <span class="nav-text">Change Password</span>
+                                    <span class="nav-text">Add Advertise</span>
                                 </a>
                             </li>
 

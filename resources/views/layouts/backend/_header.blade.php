@@ -76,23 +76,25 @@
                             {{$user->name}} <small class="pt-1">{{$user->email}}</small>
                         </div>
                     </li>
-                    <!--
+
                     <li>
-                        <a href="profile.html">
+                        <a href="{{route('user.show',$user->id)}}">
                             <i class="mdi mdi-account"></i> My Profile
                         </a>
                     </li>
+
+                    <!--
+                   <li>
+                       <a href="email-inbox.html">
+                           <i class="mdi mdi-email"></i> Message
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#"> <i class="mdi mdi-diamond-stone"></i> Projects </a>
+                   </li>
+                   -->
                     <li>
-                        <a href="email-inbox.html">
-                            <i class="mdi mdi-email"></i> Message
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"> <i class="mdi mdi-diamond-stone"></i> Projects </a>
-                    </li>
-                    -->
-                    <li>
-                        <a href="#"> <i class="mdi mdi-settings"></i> Account Setting </a>
+                        <a href="{{route('user.edit',$user->id)}}"> <i class="mdi mdi-settings"></i> Account Setting </a>
                     </li>
 
                     <li class="dropdown-footer">

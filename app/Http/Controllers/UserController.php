@@ -79,7 +79,10 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $data['title'] = 'User Profile';
+        $data['userInfo'] = User::findOrFail($id);
+        $data['adminInfo'] = User::findOrFail($id);
+        return view('admin.user.show',$data);
     }
 
     /**
