@@ -71,7 +71,7 @@
     </div>
 </div>
 
-<!-- Social -->
+<!-- Social
 <div class="header_social">
     <ul>
         <li><a style="text-decoration:none;" href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
@@ -80,3 +80,4 @@
         <li><a style="text-decoration:none;" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
     </ul>
 </div>
+-->

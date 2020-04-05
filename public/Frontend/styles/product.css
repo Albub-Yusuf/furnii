@@ -1451,3 +1451,8 @@ section
 {
     color: #FFFFFF;
 }
+@media(max-width:575px){
+    .img{
+        width:60%;
+    }
+}

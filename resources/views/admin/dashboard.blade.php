@@ -55,4 +55,8 @@
         </div>
     </div>
 
+    <hr>
+    <h3>Recent Activities</h3>
+
+
 @endsection

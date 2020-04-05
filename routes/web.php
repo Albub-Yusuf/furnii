@@ -48,6 +48,8 @@ Route::middleware('auth')->group(function(){
     Route::delete('product/{id}/delete','ProductController@delete')->name('product.delete');
     Route::get('product/{image_id}/delete/image','ProductController@delete_image')->name('product.delete.image');
 
+    Route::resource('advertise','AdvertiseController');
+
 
 
 });

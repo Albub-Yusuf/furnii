@@ -19,7 +19,7 @@ class UserController extends Controller
         $data['title']='Admin List';
         $user = new User();
         $user = $user->withTrashed();
-        $user = $user->orderBy('id','DESC')->paginate(3);
+        $user = $user->orderBy('id','DESC')->paginate(10);
         $data['users'] = $user;
         $data['serial'] = managePagination($user);
 

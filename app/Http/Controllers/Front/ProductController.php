@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\DB;
 class ProductController extends Controller
 {
 
-  
+
     public function details($id){
         $data['product'] = Product::with('category','product_image')->findOrFail($id);
         $data['categories'] = Category::withoutTrashed()->get();
@@ -60,7 +60,7 @@ class ProductController extends Controller
         foreach ($cid as $c){
             $category_id = $c;
         }
-        $data['relatedProducts'] =  Product::where('status','active')->where('category_id',$category_id)->orderBy('id','DESC')->limit(4)->get();
+        $data['relatedProducts'] =  Product::where('status','active')->where('category_id',$category_id)->orderBy('id','DESC')->limit(5)->get();
         $data['flag'] = $id;
         return view('frontend.product.productDetails',$data);
     }

@@ -121,6 +121,33 @@
                 </li>
 
                 <li  class="has-sub" >
+                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#Advertise"
+                       aria-expanded="false" aria-controls="Advertise">
+                        <i class="mdi mdi-bullhorn"></i>
+                        <span class="nav-text">Advertise</span> <b class="caret"></b>
+                    </a>
+                    <ul  class="collapse"  id="Advertise"
+                         data-parent="#sidebar-menu">
+                        <div class="sub-menu">
+
+
+
+                            <li >
+                                <a class="sidenav-item-link" href="{{route('advertise.index')}}">
+                                    <span class="nav-text">Advertise List</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a class="sidenav-item-link" href="{{route('advertise.create')}}">
+                                    <span class="nav-text">Create Advertise</span>
+                                </a>
+                            </li>
+
+                        </div>
+                    </ul>
+                </li>
+
+                <li  class="has-sub" >
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#Settings"
                        aria-expanded="false" aria-controls="Settings">
                         <i class="mdi mdi-settings"></i>
