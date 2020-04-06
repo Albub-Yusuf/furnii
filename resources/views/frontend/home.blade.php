@@ -96,12 +96,12 @@
     </div>
 
     <!-- Ads -->
-
     <div class="avds">
         <div class="avds_container d-flex flex-lg-row flex-column align-items-start justify-content-between">
+           @foreach($advs_small as $ad)
             <div class="avds_small">
-                <div class="avds_background" style="background-image:url(http://localhost/teutonsDev/public/Frontend/images/avds_small.jpg)"></div>
-                <div class="avds_small_inner">
+                <div class="avds_background" style="background-image:url({{asset($ad->image)}})"></div>
+            <!-- <div class="avds_small_inner">
                     <div class="avds_discount_container">
                         <img src="{{asset('Frontend/images/discount.png')}}" alt="">
                         <div>
@@ -110,32 +110,40 @@
                                 <div>Discount</div>
                             </div>
                         </div>
-                    </div>
-                    <div class="avds_small_content" style="color:#fff;">
-                        <div class="avds_title" style="color:#fff;">Smart Phones</div>
+                    </div> -->
+                    <div class="avds_large_content " style="color:#fff;">
+                        <div class="avds_title" style="color:#fff;">{{$ad->title}}</div>
+                        <div class="avds_text" style="color:#fff;">{{$ad->short_details}}</div>
                         <div class="avds_link"><a style="text-decoration:none;" href="#" style="color:#fff;">See More</a></div>
                     </div>
-                </div>
+                <!--   </div> -->
             </div>
+            @endforeach
+
+            @foreach($advs_large as $ad)
             <div class="avds_large">
-                <div class="avds_background" style="background-image:url(http://localhost/teutonsDev/public/Frontend/images/avds_large.jpg)"></div>
+                <div class="avds_background" style="background-image:url({{asset($ad->image)}})"></div>
                 <div class="avds_large_container">
                     <div class="avds_large_content">
-                        <div class="avds_title" style="color:#fff;">Professional Cameras</div>
-                        <div class="avds_text" style="color:#fff;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viver ra velit venenatis fermentum luctus.</div>
+                        <div class="avds_title" style="color:#fff;">{{$ad->title}}</div>
+                        <div class="avds_text" style="color:#fff;">{{$ad->short_details}}</div>
                         <div class="avds_link avds_link_large" style="color:#fff;"><a style="text-decoration:none;" style="color:#fff;" href="categories.html">See More</a></div>
                     </div>
                 </div>
             </div>
+                @endforeach
+
+
         </div>
     </div>
+
 
     <!-- Products -->
 
     <div class="products">
         <div class="container">
             <div class="row">
-                <div class="col-md-4" style="max-height:1px;background-color:lightslategrey;float:left;"></div>
+                <div class="col-md-4 blk" style="max-height:1px;background-color:lightslategrey;float:left;"></div>
                 <div class="col-md-4" style="text-align:center;"><h5>Featured Products</h5></div>
                 <div class="col-md-4" style=" max-height:1px; background-color:#00aced;float:right;"></div>
                </div>

@@ -86,7 +86,8 @@ class AdvertiseController extends Controller
      */
     public function edit(Advertise $advertise)
     {
-        //
+        $data['title'] = 'Edit Advertise';
+        return view('admin.advertise.edit',$data);
     }
 
     /**

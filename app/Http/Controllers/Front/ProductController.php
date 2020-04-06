@@ -37,7 +37,7 @@ class ProductController extends Controller
                 $product = $product->where('name','like','%'.$request->search.'%');
             }
 
-            $product = $product->orderBy('id','DESC')->paginate(4);
+            $product = $product->orderBy('id','DESC')->paginate(12);
             $data['products'] = $product;
 
             if(isset($request->search)){
@@ -60,21 +60,21 @@ class ProductController extends Controller
         foreach ($cid as $c){
             $category_id = $c;
         }
-        $data['relatedProducts'] =  Product::where('status','active')->where('category_id',$category_id)->orderBy('id','DESC')->limit(5)->get();
+        $data['relatedProducts'] =  Product::where('status','active')->where('category_id',$category_id)->orderBy('id','DESC')->limit(4)->get();
         $data['flag'] = $id;
         return view('frontend.product.productDetails',$data);
     }
     public function featuredProducts($status){
 
         $data['categories'] = Category::withoutTrashed()->get();
-        $data['featured_products'] = Product::where('status','active')->where('is_featured',$status)->orderBy('id','DESC')->paginate(10);
+        $data['featured_products'] = Product::where('status','active')->where('is_featured',$status)->orderBy('id','DESC')->paginate(12);
         return view('frontend.product.featuredProducts',$data);
     }
 
     public function latestProducts($status){
 
         $data['categories'] = Category::withoutTrashed()->get();
-        $data['latest_products'] = Product::where('status','active')->where('is_new',$status)->orderBy('id','DESC')->paginate(10);
+        $data['latest_products'] = Product::where('status','active')->where('is_new',$status)->orderBy('id','DESC')->paginate(12);
         return view('frontend.product.latestProducts',$data);
 
     }
@@ -87,7 +87,7 @@ class ProductController extends Controller
         }
         $data['category'] = $category;
         $data['categories'] = Category::withoutTrashed()->get();
-        $data['products'] = Product::with('category')->where('status','active')->where('category_id',$cat_id)->orderBy('id','DESC')->paginate(10);
+        $data['products'] = Product::with('category')->where('status','active')->where('category_id',$cat_id)->orderBy('id','DESC')->paginate(12);
         return view('frontend.product.categoryProducts',$data);
 
     }

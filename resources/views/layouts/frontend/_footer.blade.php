@@ -232,7 +232,6 @@
             <li><a style="text-decoration:none;"  href="{{route('category.products',13)}}">Adapter</a></li>
             <li><a style="text-decoration:none;"  href="{{route('category.products',14)}}">Caddy</a></li>
             <li><a style="text-decoration:none;"  href="{{route('category.products',0)}}">Bottle</a></li>
-            <li><a style="text-decoration:none;"  href="{{route('category.products',15)}}">Game</a></li>
         </ul>
         <!--l------>
 
