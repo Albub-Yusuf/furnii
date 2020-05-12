@@ -49,6 +49,9 @@ Route::middleware('auth')->group(function(){
     Route::get('product/{image_id}/delete/image','ProductController@delete_image')->name('product.delete.image');
 
     Route::resource('advertise','AdvertiseController');
+    Route::post('advertise/{id}/restore','AdvertiseController@restore')->name('advertise.restore');
+    Route::delete('advertise/{id}/delete','AdvertiseController@delete')->name('advertise.delete');
+
 
 
 

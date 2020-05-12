@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Advertise;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
 
 class AdvertiseController extends Controller
@@ -64,7 +65,7 @@ class AdvertiseController extends Controller
         Advertise::create($advertise);
 
         Session::flash('success','Advertise Created Successfully!');
-        return redirect()->route('admin.dashboard');
+        return redirect()->route('advertise.index');
     }
 
     /**
@@ -87,6 +88,8 @@ class AdvertiseController extends Controller
     public function edit(Advertise $advertise)
     {
         $data['title'] = 'Edit Advertise';
+        $data['advInfo'] = $advertise;
+       // dd($data);
         return view('admin.advertise.edit',$data);
     }
 
@@ -99,7 +102,31 @@ class AdvertiseController extends Controller
      */
     public function update(Request $request, Advertise $advertise)
     {
-        //
+
+        $request->validate([
+           'title' => 'required',
+           'short_details' => 'required',
+           'status' => 'required',
+            'image' => 'image'
+
+        ]);
+        $user = auth()->user();
+        $advertise_data = $request->except('_token','_method');
+        $advertise_data['updated_by'] = $user->id;
+
+        // image update
+        if($request->image != NULL){
+            File::delete($advertise->image);
+            if($request->hasFile('image')){
+                $file = $request->file('image');
+                $file->move('Backend/assets/img/advertise/',time().$file->getClientOriginalName());
+                $advertise_data['image'] = 'Backend/assets/img/advertise/'.time().$file->getClientOriginalName();}
+        }
+
+        $advertise->update($advertise_data);
+        Session::flash('success','Advertise Updated!!');
+        return redirect()->route('advertise.index');
+
     }
 
     /**
@@ -110,6 +137,24 @@ class AdvertiseController extends Controller
      */
     public function destroy(Advertise $advertise)
     {
-        //
+       $advertise->delete();
+        Session::flash('error','Advertise Deleted!!');
+        return redirect()->route('advertise.index');
+
+    }
+
+    public function restore($id){
+
+        Advertise::withTrashed()->find($id)->restore();
+        Session::flash('info','Advertise Restored!');
+        return redirect()->route('advertise.index');
+    }
+
+    public function delete($id){
+
+        $advertise = Advertise::where('id',$id)->onlyTrashed()->findOrFail($id);
+        $advertise->forceDelete();
+        File::delete($advertise->image);        Session::flash('error','Advertise Deleted Permanently!');
+        return redirect()->route('advertise.index');
     }
 }
