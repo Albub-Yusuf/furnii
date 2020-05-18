@@ -38,21 +38,24 @@
             <div class="row details_row">
 
                 <!-- Product Image -->
-                <div class="col-lg-6">
+                <div class=" col-lg-6">
                     <div class="details_image">
-                        <div class="details_image_large"><img src="{{asset($product->featured_image)}}" alt="">@if($product->is_new==1) <div class="product_extra product_new"><a style="text-decoration:none;" href="#">New</a></div> @endif</div>
-                        <div class="details_image_thumbnails d-flex flex-row align-items-start">
-                            <div class="details_image_thumbnails d-flex flex-row align-items-start justify-content-between">
-                                <div class="details_image_thumbnail active" data-image="{{URL::asset($product->featured_image)}}"><img src="{{URL::asset($product->featured_image)}}" alt=""></div>
-                                @if(count($product->product_image))
-                                    @foreach($product->product_image as $image)
-                                        <div class="details_image_thumbnail" data-image="{{URL::asset($image->file_path)}}"><img src="{{URL::asset($image->file_path)}}" alt=""></div>
-                                    @endforeach
-                                @endif
+                        <div class="details_image_large"><img src="{{asset($product->featured_image)}}" id="currentImage"  alt="">@if($product->is_new==1) <div class="product_extra product_new"><a href="#">New</a></div> @endif</div>
+                        <div class="product-section-images ">
+                            <div class="product-section-thumbnail selected">
+                                <img src="{{URL::asset($product->featured_image)}}"  width="100%"  alt="" >
                             </div>
+                            @if(count($product->product_image))
+                                @foreach($product->product_image as $image)
+                                    <div class="product-section-thumbnail" data-image="{{URL::asset($image->file_path)}}" style="background-color: transparent;">
+                                        <img src="{{URL::asset($image->file_path)}}"  width="100%"  alt="" >
+                                    </div>
+                                @endforeach
+                            @endif
                         </div>
                     </div>
                 </div>
+
                 <!-- Product Content -->
                 <div class="col-lg-6">
                     <div class="details_content">
@@ -90,8 +93,6 @@
                                                 <a style="text-decoration:none;" class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Description</a>
                                                 <a style="text-decoration:none;" class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Specification</a>
 
-                                                <a style="text-decoration:none;" class="nav-item nav-link" id="nav-review-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="false">Reviews</a>
-
                                             </div>
                                         </nav>
                                         <div class="tab-content" id="nav-tabContent">
@@ -121,11 +122,6 @@
                                                     -->
                                                 </div>
 
-                                            </div>
-
-                                            <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
-
-                                                <div class="description_text"><p>Currently No Review Available for this Product.</p></div>
                                             </div>
 
                                         </div>
@@ -176,6 +172,23 @@
     </div>
     @section('cjs')
         <script src="{{asset('Frontend/js/product.js')}}"></script>
+        <script>
+            (function(){
+                const currentImage = document.querySelector('#currentImage');
+                const images = document.querySelectorAll('.product-section-thumbnail');
+                images.forEach((element) => element.addEventListener('click', thumbnailClick));
+                function thumbnailClick(e) {
+
+                    currentImage.src = this.querySelector('img').src;
+
+                    images.forEach((element) => element.classList.remove('selected'));
+                    this.classList.add('selected');
+
+
+                }
+
+            })();
+        </script>
     @endsection
 @endsection
 
