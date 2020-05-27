@@ -1448,7 +1448,7 @@ section
 }
 
 /**Custom CSS**/
-.product{
+.product , .pbx{
 
     transition: transform 0.1s ease-in;
     text-decoration: none;
@@ -1458,7 +1458,7 @@ section
 
 }
 
-.product:hover{
+.product:hover , .pbx:hover{
 
 
     transform: scale(1.1);
@@ -1485,4 +1485,12 @@ section
         display:none;
     }
 }
+@media(min-width: 991px) {
+
+    .search_icon{
+        display:none;
+    }
+
+}
+
 

@@ -1487,6 +1487,46 @@ section
 {
     color: #FFFFFF;
 }
+
+/**Custom CSS**/
+.product , .pbx{
+
+    transition: transform 0.1s ease-in;
+    text-decoration: none;
+    color:#7bdfbf;
+    box-shadow:  6px 6px 10px -1px rgba(0,0,0,0.01),
+    -6px -6px 10px -1px rgba(255,255,255,0.01);
+
+}
+
+.product:hover , .pbx:hover{
+
+
+    transform: scale(1.1);
+    color:#7bdfbf;
+    box-shadow:  6px 6px 10px -1px rgba(0,0,0,0.15),
+    -6px -6px 10px -1px rgba(255,255,255,0.7);
+
+}
+
+
+@media(max-width:575px){
+    .img{
+        width:60%;
+    }
+
+    .topbar{
+
+        display: none;
+    }
+}
+@media(max-width:768px){
+
+    .topbar{
+        display:none;
+    }
+}
+
 @media(max-width:575px){
     .img{
         width:60%;

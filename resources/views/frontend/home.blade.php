@@ -223,9 +223,9 @@
                         <div class="avds_xl_background" style="background-image:url(http://localhost/teutonsDev/public/Frontend/images/about_us.jpg)"></div>
                         <div class="avds_xl_content col-lg-12" style="font-color:#e95a5a;">
                             <div class="avds_title" style=" float:right; margin-top:-5%; padding: 5%;">About Us</div>
-                            <br><br>
+                            <br><br><br>
                             <div class="avds_text col-md-12 col-sm-12 col-lg-12">
-                               <p style="color:#000;">Created by technology experts who are artistic and innovative.
+                               <p style="color:#000; float:right;">Created by technology experts who are artistic and innovative.
                                     Specialized in high-end designing, a manufacturing and marketing innovative memory product is its sole purpose.
                                     All TEUTONS® product’s research-development & designed in Spain.
                                 </p>
@@ -233,7 +233,7 @@
                                                                 <p style="text-align:justify">TEUTONS&reg; was born in Germany, named after the famous Germanic tribe mentioned by some famous authors, conceptualized and created by technology experts who are artistic and innovative. Specialized in high-end designing, a manufacturing and marketing innovative memory product is its sole purpose.</p>
 
                                                                 <p style="text-align:justify">TEUTONS&reg; and the TEUTONS&reg; logo are registered trademarks of WABA Technologies SL, C/ Alcantara 50, 28006-Madrid, Spain. All TEUTONS&reg; product&rsquo;s research-development &amp; designed in Spain. Other companies&rsquo; product names or trademarks are used herein for identification purposes only and belong to their respective companies.</p>
-                                
+
                                                               <p style="text-align:justify">TEUTONS&reg; believes that giving the best technical, financial and social support to the employees is essential to achieve the company&rsquo;s goal. The team has a systematic culture that ensures providing innovative products and achieving customer satisfaction.</p>
                                 -->
                             </div>

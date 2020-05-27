@@ -156,7 +156,7 @@
                     @foreach($relatedProducts as $product)
                         @if($product->id != $flag)
                         <!-- Product -->
-                        <div class="product">
+                        <div class="product pbx">
                             <div class="product_image"><a style="text-decoration:none;" href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt=""></a></div>
                             <!--div class="product_extra product_new"><a style="text-decoration:none;" href="#">New</a></div-->
                             <div class="product_content">

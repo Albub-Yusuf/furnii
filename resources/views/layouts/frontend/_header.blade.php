@@ -6,12 +6,48 @@
                     <div class="logo"><a style="text-decoration:none;" href="http://teutons.com.de/"><img class="img" src="{{asset('Frontend/images/Logo-128.png')}}"></a><a style="text-decoration:none;" href="#"></a></div>
                     <nav class="main_nav">
                         <ul>
+
                             <li class="hassub">
-                                <div class="search">
-                                    <div class="search_icon">
-                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                             viewBox="0 0 475.084 475.084" style="enable-background:new 0 0 475.084 475.084;"
-                                             xml:space="preserve">
+                                <div class="search_panel_content d-flex flex-row align-items-center justify-content-end">
+                                    <form action="{{route('product.search')}}" method="get">
+
+                                        <input type="text" class="search_input" style="display: inline-block;" name="search" placeholder="Search" required="required">
+                                        <button class="btn btn-sm btn-secondary" type="submit" style="display: inline-block;"><i class="fa fa-search"></i></button>
+
+                                    </form>
+                                </div>
+
+
+                            </li>
+
+                            <li class="hassub">
+                                <a style="text-decoration:none;" style="text-decoration:none;" href="{{route('frontend')}}">Home</a>
+                            </li>
+                            <li class="hassubs">
+                                <a style="text-decoration:none;" href="#">products</a>
+                                <ul>
+                                    @foreach($categories as $category)
+                                        @if($category->status == 'active')
+                                        <li class="text-sm-center"><a style="text-decoration:none;" href="{{route('category.products',$category->id)}}">{{$category->name}}</a></li>
+                                           <!-- <hr> -->
+                                        @endif
+                                    @endforeach
+                                </ul>
+                            </li>
+                            <li><a style="text-decoration:none;" href="{{route('about_us')}}">About Us</a></li>
+
+                            <!--<li><a style="text-decoration:none;" href="#">News & Events</a></li>
+                            <li class="cnv"><a style="text-decoration:none;" href="contact.html">Contact Us</a></li>-->
+
+
+                        </ul>
+                    </nav>
+                    <div class="header_extra ml-auto">
+                          <!--  <div class="search">
+                                <div class="search_icon">
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 475.084 475.084" style="enable-background:new 0 0 475.084 475.084;"
+                                         xml:space="preserve">
 										<g>
                                             <path d="M464.524,412.846l-97.929-97.925c23.6-34.068,35.406-72.047,35.406-113.917c0-27.218-5.284-53.249-15.852-78.087
 												c-10.561-24.842-24.838-46.254-42.825-64.241c-17.987-17.987-39.396-32.264-64.233-42.826
@@ -27,35 +63,9 @@
                                         </g>
 									</svg>
 
-                                    </div>
+                                </div>
 
-                                </div> &nbsp;Search
-                            </li>
-                            <li class="hassub">
-                                <a style="text-decoration:none;" style="text-decoration:none;" href="{{route('frontend')}}">Home</a>
-                            </li>
-                            <li><a style="text-decoration:none;" href="{{route('about_us')}}">About Us</a></li>
-                            <li class="hassubs">
-                                <a style="text-decoration:none;" href="#">products</a>
-                                <ul>
-                                    @foreach($categories as $category)
-                                        @if($category->status == 'active')
-                                        <li class="text-sm-center"><a style="text-decoration:none;" href="{{route('category.products',$category->id)}}">{{$category->name}}</a></li>
-                                           <!-- <hr> -->
-                                        @endif
-                                    @endforeach
-                                </ul>
-                            </li>
-
-                            <!--<li><a style="text-decoration:none;" href="#">News & Events</a></li>-->
-                            <li><a style="text-decoration:none;" href="contact.html">Contact Us</a></li>
-
-                        </ul>
-                    </nav>
-                    <div class="header_extra ml-auto">
-
-
-
+                            </div> &nbsp;-->
 
                         <div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
 
