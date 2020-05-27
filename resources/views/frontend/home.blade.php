@@ -143,9 +143,9 @@
     <div class="products">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 blk" style="max-height:1px;background-color:lightslategrey;float:left;"></div>
+                <div class="col-md-4 blk topbar" style="max-height:1px;background-color:lightslategrey;float:left;"></div>
                 <div class="col-md-4" style="text-align:center;"><h5>Featured Products</h5></div>
-                <div class="col-md-4" style=" max-height:1px; background-color:#00aced;float:right;"></div>
+                <div class="col-md-4 bottombar" style=" max-height:1px; background-color:#00aced;float:right;"></div>
                </div>
 
             <br><br><br>
@@ -154,16 +154,23 @@
 
                     <div class="product_grid">
                         <!-- Product -->
-                        @foreach($featured_products as $product)
-                        <div class="product">
-                            <div style=" width: 255px; height: 255px;">
-                                <div class="product_image"><a style="text-decoration:none;" href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt="Featured Product"></a></div>
 
-                            </div>
-                            <div class="product_content">
-                                <div class="product_title text-sm-center" ><a style="text-decoration:none;" href="{{route('details',$product->id)}}">{{$product->name}}</a></div>
-                            </div>
-                        </div>
+                        @foreach($featured_products as $product)
+
+                                <div class="product">
+                                    <a style="text-decoration:none;" href="{{route('details',$product->id)}}">
+                                    <div style=" width: 255px; height: 255px;">
+                                        <div class="product_image"><a style="text-decoration:none;" href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt="Featured Product"></a></div>
+
+                                    </div>
+                                    <div class="product_content">
+                                        <div class="product_title text-sm-center" ><a style="text-decoration:none;" href="{{route('details',$product->id)}}">{{$product->name}}</a></div>
+                                    </div>
+                                    </a>
+                                </div>
+
+
+
                         @endforeach
                        <div style="float:right; margin-top:-9%; background-color:transparent;"><sup><a style="text-decoration:none;" href="{{route('is_featured',$product->is_featured)}}">View More</a></sup></div>
 
@@ -176,9 +183,9 @@
         <!--test modify here-->
         <div class="container">
             <div class="row">
-                <div class="col-md-4" style="max-height:1px;background-color:lightslategrey;float:left;"></div>
+                <div class="col-md-4 topbar" style="max-height:1px;background-color:lightslategrey;float:left;"></div>
                 <div class="col-md-4" style="text-align:center;"><h5>Latest Products</h5></div>
-                <div class="col-md-4" style=" max-height:1px; background-color:#00aced;float:right;"></div>
+                <div class="col-md-4 bottombar" style=" max-height:1px; background-color:#00aced;float:right;"></div>
             </div>
 
             <br><br><br>
@@ -208,20 +215,28 @@
 
     <!-- Ad -->
 
-    <div class="avds_xl " >
-        <div class="container">
+    <div class="avds_xl col-lg-12" >
+        <div class="container col-lg-12">
             <div class="row">
-                <div class="col">
-                    <div class="avds_xl_container clearfix">
+                <div class="col-lg-12">
+                    <div class="avds_xl_container clearfix col-lg-12">
                         <div class="avds_xl_background" style="background-image:url(http://localhost/teutonsDev/public/Frontend/images/about_us.jpg)"></div>
-                        <div class="avds_xl_content" style="font-color:#e95a5a; width:82%;">
-                            <div class="avds_title" style="float:right; margin-top:-5%; padding: 5%;">About Us</div>
+                        <div class="avds_xl_content col-lg-12" style="font-color:#e95a5a;">
+                            <div class="avds_title" style=" float:right; margin-top:-5%; padding: 5%;">About Us</div>
                             <br><br>
                             <div class="avds_text col-md-12 col-sm-12 col-lg-12">
-                                <p style="color:#000;">Created by technology experts who are artistic and innovative.
+                               <p style="color:#000;">Created by technology experts who are artistic and innovative.
                                     Specialized in high-end designing, a manufacturing and marketing innovative memory product is its sole purpose.
                                     All TEUTONS® product’s research-development & designed in Spain.
-                                </p></div>
+                                </p>
+                                <!--
+                                                                <p style="text-align:justify">TEUTONS&reg; was born in Germany, named after the famous Germanic tribe mentioned by some famous authors, conceptualized and created by technology experts who are artistic and innovative. Specialized in high-end designing, a manufacturing and marketing innovative memory product is its sole purpose.</p>
+
+                                                                <p style="text-align:justify">TEUTONS&reg; and the TEUTONS&reg; logo are registered trademarks of WABA Technologies SL, C/ Alcantara 50, 28006-Madrid, Spain. All TEUTONS&reg; product&rsquo;s research-development &amp; designed in Spain. Other companies&rsquo; product names or trademarks are used herein for identification purposes only and belong to their respective companies.</p>
+                                
+                                                              <p style="text-align:justify">TEUTONS&reg; believes that giving the best technical, financial and social support to the employees is essential to achieve the company&rsquo;s goal. The team has a systematic culture that ensures providing innovative products and achieving customer satisfaction.</p>
+                                -->
+                            </div>
                            <!-- <div class="avds_link avds_xl_link"><a style="text-decoration:none;" href="categories.html">See More</a></div> -->
 
                             </div>

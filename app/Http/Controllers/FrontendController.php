@@ -23,6 +23,6 @@ class FrontendController extends Controller
    }
    public function aboutUs(){
        $data['categories'] = Category::withoutTrashed()->get();
-       return view('frontend.aboutUs',$data);
+       return view('frontend.abouttest',$data);
    }
 }
