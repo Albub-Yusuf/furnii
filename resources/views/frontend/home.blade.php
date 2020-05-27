@@ -157,19 +157,15 @@
 
                         @foreach($featured_products as $product)
 
-                                <div class="product">
-                                    <a style="text-decoration:none;" href="{{route('details',$product->id)}}">
-                                    <div style=" width: 255px; height: 255px;">
-                                        <div class="product_image"><a style="text-decoration:none;" href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt="Featured Product"></a></div>
 
-                                    </div>
-                                    <div class="product_content">
-                                        <div class="product_title text-sm-center" ><a style="text-decoration:none;" href="{{route('details',$product->id)}}">{{$product->name}}</a></div>
-                                    </div>
-                                    </a>
+
+                            <div class="product">
+                                <div class="product_image"><a style="text-decoration:none;" href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt=""></a></div>
+                                <div class="product_content">
+                                    <div class="product_title text-sm-center"><a style="text-decoration:none;" href="{{route('details',$product->id)}}">{{$product->name}}</a></div>
+
                                 </div>
-
-
+                            </div>
 
                         @endforeach
                        <div style="float:right; margin-top:-9%; background-color:transparent;"><sup><a style="text-decoration:none;" href="{{route('is_featured',$product->is_featured)}}">View More</a></sup></div>
