@@ -7,24 +7,17 @@
             </form>
         </div>
         <ul class="page_menu_nav menu_mm">
-            <li class="page_menu_item has-children menu_mm">
-                <div class="search_panel_content d-flex flex-row align-items-center justify-content-end">
-                    <form action="www.google.com" method="get">
+          <!--  <li>
 
-                        <input type="text" class="search_input" style="display: inline-block;" name="search" placeholder="Search" required="required">
-                        <button class="btn btn-sm btn-secondary" type="submit" style="display: inline-block;"><i class="fa fa-search"></i></button>
-
-                    </form>
-                </div>
-                <!--<ul class="page_menu_selection menu_mm">
+                <ul class="page_menu_selection menu_mm">
                     <li class="page_menu_item menu_mm"><a href="categories.html">About Us<i class="fa fa-angle-down"></i></a></li>
                     <li class="page_menu_item menu_mm"><a href="product.html">Products<i class="fa fa-angle-down"></i></a></li>
 
                     <li class="page_menu_item menu_mm"><a href="cart.html">Cart<i class="fa fa-angle-down"></i></a></li>
                     <li class="page_menu_item menu_mm"><a href="checkout.html">Checkout<i class="fa fa-angle-down"></i></a></li>
-                    <li class="page_menu_item menu_mm"><a href="contact.html">Contact<i class="fa fa-angle-down"></i></a></li> -->
+                    <li class="page_menu_item menu_mm"><a href="contact.html">Contact<i class="fa fa-angle-down"></i></a></li>
                 </ul>
-            </li>
+            </li> -->
 
 
         <li class="page_menu_item menu_mm"><a href="{{route('frontend')}}">Home</a></li>
@@ -38,7 +31,9 @@
                 </ul>
             </li>
 
-        <li class="page_menu_item menu_mm"><a href="{{route('about_us')}}">About Us<i class="fa fa-angle-down"></i></a></li>
+        <li class="page_menu_item menu_mm"><a href="{{route('about_us')}}">About Us<i class="fa fa-home"></i></a></li>
+
+
 <!--
             <li class="page_menu_item menu_mm"><a href="#">News & Events<i class="fa fa-angle-down"></i></a></li>
             <li class="page_menu_item menu_mm"><a href="contact.html">Contact Us<i class="fa fa-angle-down"></i></a></li>
@@ -49,6 +44,7 @@
 
 <div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
 
+<!--
 <div class="menu_social">
     <ul>
         <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
@@ -57,3 +53,4 @@
         <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
     </ul>
 </div>
+-->

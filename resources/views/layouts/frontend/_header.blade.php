@@ -4,22 +4,19 @@
             <div class="col">
                 <div class="header_content d-flex flex-row align-items-center justify-content-start">
                     <div class="logo"><a style="text-decoration:none;" href="http://teutons.com.de/"><img class="img" src="{{asset('Frontend/images/Logo-128.png')}}"></a><a style="text-decoration:none;" href="#"></a></div>
+                    <div class="test" style=" margin:0 auto; text-align: center;">
+
+                        <div class="search_panel_content d-flex flex-row align-items-center justify-content-end">
+                            <form action="{{route('product.search')}}" method="get">
+
+                                <input type="text" class="search_input" style="display: inline-block;" name="search" placeholder="Search" required="required">
+                                <button class="btn btn-sm btn-secondary" type="submit" style="display: inline-block;"><i class="fa fa-search"></i></button>
+
+                            </form>
+                        </div>
+                    </div>
                     <nav class="main_nav">
                         <ul>
-
-                            <li class="hassub">
-                                <div class="search_panel_content d-flex flex-row align-items-center justify-content-end">
-                                    <form action="{{route('product.search')}}" method="get">
-
-                                        <input type="text" class="search_input" style="display: inline-block;" name="search" placeholder="Search" required="required">
-                                        <button class="btn btn-sm btn-secondary" type="submit" style="display: inline-block;"><i class="fa fa-search"></i></button>
-
-                                    </form>
-                                </div>
-
-
-                            </li>
-
                             <li class="hassub">
                                 <a style="text-decoration:none;" style="text-decoration:none;" href="{{route('frontend')}}">Home</a>
                             </li>

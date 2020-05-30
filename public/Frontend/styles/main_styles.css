@@ -1492,5 +1492,40 @@ section
     }
 
 }
+@media(max-width: 545px){
+
+    .test input[type=text] {
+        width: 80%;
+        text-align: center;
+    }
+}
+@media(max-width: 342px){
+
+    .test input[type=text] {
+        width: 60%;
+        text-align: center;
+    }
+}
+@media(max-width: 407px){
+
+    .avds_text p {
+        margin-top: -2%;
 
 
+    }
+    #br2,#br1{
+        display: none;
+    }
+}
+@media(max-width: 358px){
+
+    .avds_text p {
+        margin-top: -2%;
+        font-size: 12px;
+
+
+    }
+    #br2,#br1{
+        display: none;
+    }
+}

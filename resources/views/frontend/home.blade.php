@@ -219,7 +219,7 @@
                         <div class="avds_xl_background" style="background-image:url(http://localhost/teutonsDev/public/Frontend/images/about_us.jpg)"></div>
                         <div class="avds_xl_content col-lg-12" style="font-color:#e95a5a;">
                             <div class="avds_title" style=" float:right; margin-top:-5%; padding: 5%;">About Us</div>
-                            <br><br><br>
+                            <br><br id="br1"><br id="br2">
                             <div class="avds_text col-md-12 col-sm-12 col-lg-12">
                                <p style="color:#000; float:right;">Created by technology experts who are artistic and innovative.
                                     Specialized in high-end designing, a manufacturing and marketing innovative memory product is its sole purpose.
