@@ -162,7 +162,7 @@
                             <div class="product">
                                 <div class="product_image"><a style="text-decoration:none;" href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt=""></a></div>
                                 <div class="product_content">
-                                    <div class="product_title text-sm-center"><a style="text-decoration:none;" href="{{route('details',$product->id)}}">{{$product->name}}</a></div>
+                                    <div class="product_title text-center"><a style="text-decoration:none;" href="{{route('details',$product->id)}}">{{$product->name}}</a></div>
 
                                 </div>
                             </div>
@@ -195,7 +195,7 @@
                           <div class="product_image"><a style="text-decoration:none;" href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt=""></a></div>
                             <div class="product_extra product_new"><a style="text-decoration:none;" href="#">New</a></div>
                             <div class="product_content">
-                                <div class="product_title text-sm-center"><a style="text-decoration:none;" href="{{route('details',$product->id)}}">{{$product->name}}</a></div>
+                                <div class="product_title text-center"><a style="text-decoration:none;" href="{{route('details',$product->id)}}">{{$product->name}}</a></div>
 
                             </div>
                         </div>
@@ -208,6 +208,10 @@
             </div>
         </div>
     </div>
+
+
+
+
 
     <!-- Ad -->
 
