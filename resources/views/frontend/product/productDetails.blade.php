@@ -1,6 +1,7 @@
 @extends('layouts.frontend.master')
 @section('ccss')
-    <link rel="stylesheet" type="text/css" href="{{asset('Frontend/styles/bootstrap4/bootstrap.min.css')}}">
+    <!--
+    <link rel="stylesheet" type="text/css" href="{{asset('Frontend/styles/bootstrap4/bootstrap.min.css')}}"> -->
     <link href="{{asset('Frontend/plugins/font-awesome-4.7.0/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="{{asset('Frontend/plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('Frontend/plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
@@ -8,21 +9,23 @@
     <link rel="stylesheet" type="text/css" href="{{asset('Frontend/styles/product.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('Frontend/styles/product_responsive.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('Frontend/facncybox/jquery.fancybox.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" id="bootstrap-css">
+   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" id="bootstrap-css">
+
+
 @endsection
 @section('mainContent')
     <!-- Home -->
 
-    <div class="home">
-        <div class="home_container">
-            <div class="home_background" style="background-image:url(http://localhost/teutonsDev/public/Frontend/images/categories.jpg)"></div>
+    <div class="home" style="height:300px;">
+        <div class="home_container" >
+            <div class="home_background" style="background-image:url(http://localhost/teutonsDev/public/Frontend/images/bg.png)"></div>
             <div class="home_content_container">
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <div class="home_content">
-                                <div class="home_title">{{$product->category->name}}<span>.</span></div>
-                                <div class="home_text"><p style="color:#34ce57">{{$product->name}}</p></div>
+                            <div class="home_content" style="width: 100%;">
+                                <div class="home_title" style="text-align:center ; width: 100%;">{{$product->name}}<span>.</span></div>
+                                <div class="home_text"><p style="color:#34ce57; text-align: center; width: 100%;">{{$product->category->name}}</p></div>
                             </div>
                         </div>
                     </div>
@@ -30,6 +33,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- Product Details -->
 
@@ -40,10 +44,14 @@
                 <!-- Product Image -->
                 <div class=" col-lg-6">
                     <div class="details_image">
-                        <div class="details_image_large"><img src="{{asset($product->featured_image)}}" id="currentImage"  alt="">@if($product->is_new==1) <div class="product_extra product_new"><a href="#">New</a></div> @endif</div>
+                        <div class="details_image_large">
+                            <img src="{{asset($product->featured_image)}}" id="currentImage"  alt="">
+                                @if($product->is_new==1) <div class="product_extra product_new"><a href="#">New</a></div> @endif</div>
                         <div class="product-section-images ">
                             <div class="product-section-thumbnail selected">
+
                                 <img src="{{URL::asset($product->featured_image)}}"  width="100%"  alt="" >
+
                             </div>
                             @if(count($product->product_image))
                                 @foreach($product->product_image as $image)
@@ -189,6 +197,7 @@
 
             })();
         </script>
+        <script src="{{asset('Frontend/js/jquery.fancybox.min.js')}}"></script>
     @endsection
 @endsection
 

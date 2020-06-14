@@ -5,7 +5,7 @@
 <script src="{{asset('Frontend/js/jquery-3.2.1.min.js')}}"></script>
 <!--JS For FancyBox-->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="{{asset('Frontend/fancybox/jquery.fancybox.min.js')}}"></script>
+<script src="{{asset('Frontend/js/jquery.fancybox.min.js')}}"></script>
 <!---->
 
 <script src="{{asset('Frontend/js/jquery-3.2.1.min.js')}}"></script>

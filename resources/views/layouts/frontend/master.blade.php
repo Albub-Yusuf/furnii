@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     @include('layouts.frontend._head')
-
 </head>
 <body>
 
