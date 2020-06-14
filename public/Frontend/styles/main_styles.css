@@ -1013,7 +1013,7 @@ section
 {
 	font-size: 48px;
 	font-weight: 600;
-	color: #e95a5a;
+	color: #FFFFFF;
 	line-height: 1.16;
 }
 .avds_link
@@ -1027,7 +1027,8 @@ section
 	display: inline-block;
 	font-size: 14px;
 	font-weight: 400;
-	color: #e95a5a;
+	color: #FFFFFF;
+    text-decoration: none;
 }
 .avds_link a::after
 {
@@ -1037,8 +1038,9 @@ section
 	bottom: 0;
 	width: 100%;
 	height: 1px;
-	background: #e95a5a;
+	background: #FFFFFF;
 	content: '';
+    text-decoration: none;
 }
 
 /* Ad Large */
@@ -1070,7 +1072,7 @@ section
 {
 	font-size: 14px;
 	font-weight: 400;
-	color: #e95a5a;
+	color: #FFFFFF;
 	line-height: 2.14;
 	margin-top: 11px;
 	padding-left: 2px;
@@ -1204,16 +1206,16 @@ section
 {
 	width: 391px;
 	height: 100%;
-	/**background: #e95a5a;**/
-    background: transparent;
-	float: right;
-	padding-top: 28px;
-	padding-left: 42px;
-	padding-right: 30px;
+	background: #e95a5a;
+/**background: transparent;**/
+float: right;
+padding-top: 28px;
+padding-left: 42px;
+padding-right: 30px;
 }
 .avds_xl_link
 {
-	margin-top: 18px;
+margin-top: 18px;
 }
 
 /*********************************

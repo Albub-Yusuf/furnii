@@ -96,12 +96,12 @@
     </div>
 
     <!-- Ads -->
-    <div class="avds">
-        <div class="avds_container d-flex flex-lg-row flex-column align-items-start justify-content-between">
-           @foreach($advs_small as $ad)
-            <div class="avds_small">
-                <div class="avds_background" style="background-image:url({{asset($ad->image)}})"></div>
-            <!-- <div class="avds_small_inner">
+        <div class="avds">
+            <div class="avds_container d-flex flex-lg-row flex-column align-items-start justify-content-between">
+                @foreach($advs_small as $ad)
+                    <div class="avds_small">
+                        <div class="avds_background" style="background-image:url({{asset($ad->image)}})"></div>
+                    <!-- <div class="avds_small_inner">
                     <div class="avds_discount_container">
                         <img src="{{asset('Frontend/images/discount.png')}}" alt="">
                         <div>
@@ -111,32 +111,31 @@
                             </div>
                         </div>
                     </div> -->
-                    <div class="avds_large_content " style="color:#fff;">
-                        <div class="avds_title" style="color:#fff;">{{$ad->title}}</div>
-                        <div class="avds_text" style="color:#fff;">{{$ad->short_details}}</div>
-                        <div class="avds_link"><a style="text-decoration:none;" href="#" style="color:#fff;">See More</a></div>
+                        <div class="avds_large_content " style="color:#fff;">
+                            <div class="avds_title" style="color:#fff;">{{$ad->title}}</div>
+                            <div class="avds_text" style="color:#fff;">{{$ad->short_details}}</div>
+                            <div class="avds_link"><a style="text-decoration:none;" href="#" style="color:#fff;">See More</a></div>
+                        </div>
+                        <!--   </div> -->
                     </div>
-                <!--   </div> -->
-            </div>
-            @endforeach
+                @endforeach
 
-            @foreach($advs_large as $ad)
-            <div class="avds_large">
-                <div class="avds_background" style="background-image:url({{asset($ad->image)}})"></div>
-                <div class="avds_large_container">
-                    <div class="avds_large_content">
-                        <div class="avds_title" style="color:#fff;">{{$ad->title}}</div>
-                        <div class="avds_text" style="color:#fff;">{{$ad->short_details}}</div>
-                        <div class="avds_link avds_link_large" style="color:#fff;"><a style="text-decoration:none;" style="color:#fff;" href="categories.html">See More</a></div>
+                @foreach($advs_large as $ad)
+                    <div class="avds_large">
+                        <div class="avds_background" style="background-image:url({{asset($ad->image)}})"></div>
+                        <div class="avds_large_container">
+                            <div class="avds_large_content">
+                                <div class="avds_title" style="color:#fff;">{{$ad->title}}</div>
+                                <div class="avds_text" style="color:#fff;">{{$ad->short_details}}</div>
+                                <div class="avds_link avds_link_large" style="color:#fff;"><a style="text-decoration:none;" style="color:#fff;" href="categories.html">See More</a></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
                 @endforeach
 
 
+            </div>
         </div>
-    </div>
-
 
     <!-- Products -->
 
@@ -214,42 +213,27 @@
 
 
     <!-- Ad -->
-
-    <div class="avds_xl col-lg-12" >
-        <div class="container col-lg-12">
+    <div class="avds_xl">
+        <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="avds_xl_container clearfix col-lg-12">
-                        <div class="avds_xl_background" style="background-image:url(http://localhost/teutonsDev/public/Frontend/images/about_us.jpg)"></div>
-                        <div class="avds_xl_content col-lg-12" style="font-color:#e95a5a;">
-                            <div class="avds_title" style=" float:right; margin-top:-5%; padding: 5%;">About Us</div>
-                            <br><br id="br1"><br id="br2">
-                            <div class="avds_text col-md-12 col-sm-12 col-lg-12">
-                               <p style="color:#000; float:right;">Created by technology experts who are artistic and innovative.
-                                    Specialized in high-end designing, a manufacturing and marketing innovative memory product is its sole purpose.
-                                    All TEUTONS® product’s research-development & designed in Spain.
-                                </p>
-                                <!--
-                                                                <p style="text-align:justify">TEUTONS&reg; was born in Germany, named after the famous Germanic tribe mentioned by some famous authors, conceptualized and created by technology experts who are artistic and innovative. Specialized in high-end designing, a manufacturing and marketing innovative memory product is its sole purpose.</p>
-
-                                                                <p style="text-align:justify">TEUTONS&reg; and the TEUTONS&reg; logo are registered trademarks of WABA Technologies SL, C/ Alcantara 50, 28006-Madrid, Spain. All TEUTONS&reg; product&rsquo;s research-development &amp; designed in Spain. Other companies&rsquo; product names or trademarks are used herein for identification purposes only and belong to their respective companies.</p>
-
-                                                              <p style="text-align:justify">TEUTONS&reg; believes that giving the best technical, financial and social support to the employees is essential to achieve the company&rsquo;s goal. The team has a systematic culture that ensures providing innovative products and achieving customer satisfaction.</p>
-                                -->
-                            </div>
-                           <!-- <div class="avds_link avds_xl_link"><a style="text-decoration:none;" href="categories.html">See More</a></div> -->
-
-                            </div>
-                            <!--<div class="avds_link avds_xl_link"><a style="text-decoration:none;" href="categories.html">See More</a></div>-->
+                <div class="col">
+                    <div class="avds_xl_container clearfix">
+                        <div class="avds_xl_background" style="background-image:url(http://localhost/teutonsDev/public/Frontend/images/avds_xl.jpg)"></div>
+                        <div class="avds_xl_content" style="color:#fff;">
+                            <div class="avds_title">Amazing Devices</div>
+                            <div class="avds_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus.</div>
+                            <div class="avds_link avds_xl_link"><a href="categories.html">See More</a></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <!---->
 
     <br><br>
     <!--Test Div(About US)-->
-    <!--
+
     <div class="newsletter col-lg-10 offset-lg-1" >
         <div class="container" >
             <div class="row">
@@ -267,8 +251,30 @@
             </div>
         </div>
     </div>
-    -->
-    <br>
+    <!-- Newsletter -->
+    <div class="newsletter">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="newsletter_border"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="newsletter_content text-center">
+                        <div class="newsletter_title">Subscribe to our newsletter</div>
+                        <div class="newsletter_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros</p></div>
+                        <div class="newsletter_form_container">
+                            <form action="#" id="newsletter_form" class="newsletter_form">
+                                <input type="email" class="newsletter_input" required="required">
+                                <button class="newsletter_button trans_200"><span>Subscribe</span></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     @section('cjs')
         <script src="{{asset('Frontend/js/custom.js')}}"></script>
     @endsection
