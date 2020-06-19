@@ -342,8 +342,7 @@ section
 }
 .header.scrolled .logo a .img
 {
-    font-size: 24px;
-    height:70px;
+
 }
 .main_nav
 {
@@ -1509,7 +1508,7 @@ section
 
 }
 
-
+/*
 @media(max-width:575px){
     .img{
         width:60%;
@@ -1532,3 +1531,90 @@ section
         width:60%;
     }
 }
+*/
+/*custom css*/
+/**Custom CSS**/
+.product , .pbx{
+
+    transition: transform 0.1s ease-in;
+    text-decoration: none;
+    color:#7bdfbf;
+    box-shadow:  6px 6px 10px -1px rgba(0,0,0,0.01),
+    -6px -6px 10px -1px rgba(255,255,255,0.01);
+
+}
+
+.product:hover , .pbx:hover{
+
+
+    transform: scale(1.1);
+    color:#7bdfbf;
+    box-shadow:  6px 6px 10px -1px rgba(0,0,0,0.15),
+    -6px -6px 10px -1px rgba(255,255,255,0.7);
+
+}
+
+
+@media(max-width:575px){
+    .img{
+        width:60%;
+    }
+
+    .topbar{
+
+        display: none;
+    }
+}
+@media(max-width:768px){
+
+    .topbar{
+        display:none;
+    }
+}
+@media(min-width: 991px) {
+
+    .search_icon{
+        display:none;
+    }
+
+}
+@media(max-width: 545px){
+
+    .test input[type=text] {
+        width: 80%;
+        text-align: center;
+    }
+}
+@media(max-width: 342px){
+
+    .test input[type=text] {
+        width: 60%;
+        text-align: center;
+    }
+}
+@media(max-width: 407px){
+
+    .avds_text p {
+        margin-top: -2%;
+
+
+    }
+    #br2,#br1{
+        display: none;
+    }
+}
+@media(max-width: 358px){
+
+    .avds_text p {
+        margin-top: -2%;
+        font-size: 12px;
+
+
+    }
+    #br2,#br1{
+        display: none;
+    }
+}
+
+
+

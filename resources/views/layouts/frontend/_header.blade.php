@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col">
                 <div class="header_content d-flex flex-row align-items-center justify-content-start">
-                    <div class="logo"><a style="text-decoration:none;" href="http://teutons.com.de/"><img class="img" src="{{asset('Frontend/images/Logo-128.png')}}"></a><a style="text-decoration:none;" href="#"></a></div>
-                    <div class="test" style=" margin:0 auto; text-align: center;">
+                    <div class="logo"><a style="text-decoration:none;" href="#"><img class="img" src="{{asset('Frontend/images/Logo-128.png')}}"></a><a style="text-decoration:none;" href="#"></a></div>
+                    <div class="test" style="margin:0 auto; text-align: center;">
 
                         <div class="search_panel_content d-flex flex-row align-items-center justify-content-end">
                             <form action="{{route('product.search')}}" method="get">
