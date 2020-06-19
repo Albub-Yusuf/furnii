@@ -25,9 +25,18 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
-                                        <div class="home_slider_title">A new Online Shop experience.</div>
-                                        <div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</div>
+                                    <!---->
+                                    <div style="float:right;"class="home_slider_content col-md-6 col-sm-12"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
+                                        <img style="width: 80%;" src="{{asset('Frontend/images/sgdf.png')}}" alt="">
+                                        <!-- <div class="home_slider_title">A new Online Shop experience.</div>
+                                         div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</div>
+                                        <div class="button button_light home_button"><a style="text-decoration:none;" href="#">Visit Now</a></div>-->
+                                    </div>
+                                    <!--
+                                    <br><br><br><br><br>-->
+                                    <div class="home_slider_content col-md-6 col-sm-12"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
+                                        <div class="home_slider_title"><br>Teutons Solid Gold 3.1 USB Flash Drive</div>
+                                        <!--<div class="home_slider_subtitle">3.1 USB Flash Drive.</div> -->
                                         <div class="button button_light home_button"><a style="text-decoration:none;" href="#">Visit Now</a></div>
                                     </div>
                                 </div>
@@ -43,8 +52,17 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <div style="float:right;"class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
-                                        <div class="home_slider_title">A new Online Shop experience.</div>
+                                    <!---->
+                                    <div style="float:left;"class="home_slider_content col-md-6 col-sm-12"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
+                                        <img style="width: 80%;" src="{{asset('Frontend/images/ssd.png')}}" alt="">
+                                        <!-- <div class="home_slider_title">A new Online Shop experience.</div>
+                                         div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</div>
+                                        <div class="button button_light home_button"><a style="text-decoration:none;" href="#">Visit Now</a></div>-->
+                                    </div>
+                                    <!--
+                                    <br><br><br><br><br>-->
+                                    <div style="float:right;"class="home_slider_content col-md-6 col-sm-12"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
+                                        <div class="home_slider_title"><br>Teutons SSD</div>
                                         <!--div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</div>-->
                                         <div class="button button_light home_button"><a style="text-decoration:none;" href="#">Visit Now</a></div>
                                     </div>
@@ -61,10 +79,18 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <div style="float:right;" class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
-                                        <div style="color:#000;" class="home_slider_title" data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">A new Online Shop experience.</div>
+                                    <div style="float:left;"class="home_slider_content col-md-6 col-sm-12"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
+                                        <img style="width: 80%;" src="{{asset('Frontend/images/layer2.png')}}" alt="">
+                                        <!-- <div class="home_slider_title">A new Online Shop experience.</div>
+                                         div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</div>
+                                        <div class="button button_light home_button"><a style="text-decoration:none;" href="#">Visit Now</a></div>-->
+                                    </div>
+
+
+                                    <div style="float:right;" class="home_slider_content col-md-6 col-sm-12"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
+                                        <div style="color:#000;" class="home_slider_title" data-animation-in="fadeIn" data-animation-out="animate-out fadeOut"><br>Teutons Velocity RAM.</div>
                                        <!-- <div style="color:#000;" class="home_slider_subtitle" data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</div> -->
-                                        <div  style="color:#000;" class="button button_light home_button" data-animation-in="fadeIn" data-animation-out="animate-out fadeOut"><a style="text-decoration:none;" style="color:#000;" href="#">Visit Now</a></div>
+                                        <div  style=" background-color:#4c84ff;color:#000;" class="button button_light home_button" data-animation-in="fadeIn" data-animation-out="animate-out fadeOut"><a style="text-decoration:none;" style="color:#000;" href="#">Visit Now</a></div>
                                     </div>
                                 </div>
                             </div>
