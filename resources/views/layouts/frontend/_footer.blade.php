@@ -164,6 +164,11 @@
                 align-items: center;
                 text-align: center;
             }
+
+            .flogo{
+                display: none;
+            }
+
             .up-section ul h1, .down-section ul h1{
 
                 font-size: 25px;
@@ -190,7 +195,7 @@
     <!--top section-->
     <div class="up-section">
         <!--logo-->
-        <div class="col-md-4 col-sm-12 col-lg-4">
+        <div class="flogo col-md-4 col-sm-12 col-lg-4">
             <a style="text-decoration:none;"  href="#" class="f-logo">Teutons<sup>&reg</sup></a>
         </div>
 
@@ -199,11 +204,11 @@
         <div class="col-md-8 col-sm-10 col-lg-8" style="background-color: transparent;">
             <ul>
                 <!--heading-->
-                <h1>About Us</h1>
+                <h1>Who We Are</h1>
                <p style="color:#9697a0;">TEUTONS® was born in Germany, named after the famous Germanic tribe mentioned by some famous authors, conceptualized and created by technology experts who are artistic and innovative. Specialized in high-end designing, a manufacturing and marketing innovative memory product is its sole purpose. All TEUTONS® product’s research-development & designed in Spain.
                 </p>
 
-                <!-- 
+                <!--
                                 <p style="color:#9697a0;">TEUTONS&reg; was born in Germany, named after the famous Germanic tribe mentioned by some famous authors, conceptualized and created by technology experts who are artistic and innovative. Specialized in high-end designing, a manufacturing and marketing innovative memory product is its sole purpose.</p>
 
                                 <p style="color:#9697a0;">TEUTONS&reg; and the TEUTONS&reg; logo are registered trademarks of WABA Technologies SL, C/ Alcantara 50, 28006-Madrid, Spain. All TEUTONS&reg; product&rsquo;s research-development &amp; designed in Spain. Other companies&rsquo; product names or trademarks are used herein for identification purposes only and belong to their respective companies.</p>
