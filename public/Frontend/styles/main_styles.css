@@ -646,6 +646,7 @@ section
 	height: 100vh;
 	background: #e4e4e4;
 	z-index: 101;
+    overflow: scroll;
 }
 .menu.active
 {
@@ -670,7 +671,7 @@ section
 }
 .page_menu_search
 {
-	display: none;
+	/*display: none;*/
 	width: 100%;
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -1491,7 +1492,14 @@ margin-top: 18px;
 @media(min-width: 991px) {
 
     .search_icon{
-        display:none;
+       /* display:none;*/
+    }
+
+}
+@media(max-width: 991px) {
+
+    .search_icon{
+       display:none;
     }
 
 }

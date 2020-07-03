@@ -8,14 +8,19 @@
     <link rel="stylesheet" type="text/css" href="{{asset('Frontend/plugins/OwlCarousel2-2.2.1/animate.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('Frontend/styles/product.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('Frontend/styles/product_responsive.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('Frontend/facncybox/jquery.fancybox.min.css')}}">
    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" id="bootstrap-css">
-
-
+    <!-- jQuery 1.8 or later, 33 KB -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Fotorama from CDNJS, 19 KB -->
+   <!-- <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="{{asset('Frontend/fotorama-4.6.4/fotoroma.css')}}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <!--fotoroma cdn ends here-->
 @endsection
 @section('mainContent')
     <!-- Home -->
-
+    <br><br>
+<!--
     <div class="home" style="height:300px;">
         <div class="home_container" >
             <div class="home_background" style="background-image:url(http://localhost/teutonsDev/public/Frontend/images/bg.png)"></div>
@@ -33,7 +38,7 @@
             </div>
         </div>
     </div>
-
+-->
 
     <!-- Product Details -->
 
@@ -43,6 +48,21 @@
 
                 <!-- Product Image -->
                 <div class=" col-lg-6">
+
+                <!--
+                    <div class="fotorama" data-transition="slide" data-nav="thumbs" data-allowfullscreen="native"               data-autoplay="3000" data-keyboard='{"space": true, "home": true, "end": true, "up": true, "down": true}'>
+                               
+
+                        @if(count($product->product_image))
+                            @foreach($product->product_image as $image)
+                                       <a href="{{asset($product->featured_image)}}"><img src="{{asset($product->featured_image)}}" width="144" height="96"></a>
+
+                            @endforeach
+                        @endif
+
+
+                             </div>-->
+
                     <div class="details_image">
                         <div class="details_image_large">
                             <img src="{{asset($product->featured_image)}}" id="currentImage"  alt="">
@@ -62,6 +82,9 @@
                             @endif
                         </div>
                     </div>
+
+
+
                 </div>
 
                 <!-- Product Content -->

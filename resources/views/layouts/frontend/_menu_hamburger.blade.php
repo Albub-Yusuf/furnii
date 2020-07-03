@@ -2,8 +2,10 @@
     <div class="page_menu_content">
 
         <div class="page_menu_search menu_mm">
-            <form action="#">
-                <input type="search" required="required" class="page_menu_search_input menu_mm" placeholder="Search for products...">
+            <form action="{{route('product.search')}}" method="get">
+                @csrf
+                @method('get')
+                <input name="search" type="search" required="required" class="page_menu_search_input menu_mm" placeholder="Search for products...">
             </form>
         </div>
         <ul class="page_menu_nav menu_mm">
