@@ -34,7 +34,7 @@
                             <li><a style="text-decoration:none;" href="{{route('about_us')}}">About Us</a></li>
 
                             <li><a style="text-decoration:none;" href="#">News & Events</a></li>
-                            <li class="cnv"><a style="text-decoration:none;" href="contact.html">Contact Us</a></li>
+                            <li class="cnv"><a style="text-decoration:none;" href="{{route('contact_us')}}">Contact Us</a></li>
                         </ul>
                     </nav>
                     <div class="header_extra ml-auto">

@@ -27,6 +27,7 @@ Route::get('featured/products/{is_featured}','Front\ProductController@featuredPr
 Route::get('latest/products/{is_new}','Front\ProductController@latestProducts')->name('is_new');
 Route::get('category/products/{cat_id}','Front\ProductController@categoryProducts')->name('category.products');
 Route::get('about-us/','FrontendController@aboutUs')->name('about_us');
+Route::get('contact_us/','FrontendController@contactUs')->name('contact_us');
 
 
 
@@ -51,6 +52,8 @@ Route::middleware('auth')->group(function(){
     Route::resource('advertise','AdvertiseController');
     Route::post('advertise/{id}/restore','AdvertiseController@restore')->name('advertise.restore');
     Route::delete('advertise/{id}/delete','AdvertiseController@delete')->name('advertise.delete');
+
+
 
 
 

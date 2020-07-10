@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="926319ea-4a9a-4005-9687-52d690a7a7c1" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/frontend/contactUs.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontendController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontendController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/abouttest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/abouttest.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/product/productDetails.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/product/productDetails.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/frontend/_menu_hamburger.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/frontend/_menu_hamburger.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/frontend/_head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/frontend/_head.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/frontend/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/frontend/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,11 +160,11 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\teutonsDev\public\Frontend\js" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\teutonsDev\public\Frontend\anim" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\teutonsDev\public\Frontend\js" />
     </key>
   </component>
   <component name="RunManager">
@@ -407,7 +408,9 @@
       <workItem from="1592844384537" duration="1666000" />
       <workItem from="1593778237409" duration="1784000" />
       <workItem from="1593780054947" duration="2030000" />
-      <workItem from="1594375315381" duration="1639000" />
+      <workItem from="1594375315381" duration="1778000" />
+      <workItem from="1594377123350" duration="1108000" />
+      <workItem from="1594379360482" duration="1224000" />
     </task>
     <servers />
   </component>
@@ -427,15 +430,15 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586088663081" />
-    <state x="604" y="344" key="NewPhpFileDialog" timestamp="1589816495195">
+    <state x="604" y="344" key="NewPhpFileDialog" timestamp="1594379583465">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="344" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1589816495195" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1594375315900">
+    <state x="604" y="344" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1594379583465" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1594379360818">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1593780055747" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1594375315900" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1594379360818" />
     <state x="427" y="105" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586067306736">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
