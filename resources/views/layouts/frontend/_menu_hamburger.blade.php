@@ -3,7 +3,6 @@
 
         <div class="page_menu_search menu_mm">
             <form action="{{route('product.search')}}" method="get">
-                @csrf
                 @method('get')
                 <input name="search" type="search" required="required" class="page_menu_search_input menu_mm" placeholder="Search for products...">
             </form>
