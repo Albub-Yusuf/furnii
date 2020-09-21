@@ -30,6 +30,19 @@
 2. Body and some general stuff
 *********************************/
 
+::-moz-selection {
+
+    background-color: #778899;
+    color: #fff;
+
+}
+
+::selection {
+
+    background-color: #778899;
+    color: #fff;
+}
+
 *
 {
 	margin: 0;
