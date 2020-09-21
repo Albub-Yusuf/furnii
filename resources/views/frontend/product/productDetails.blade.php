@@ -1,5 +1,22 @@
 @extends('layouts.frontend.master')
 @section('ccss')
+
+    <style>
+
+        body{
+
+            font-family:Lato;
+            color:#6c6a74;
+
+        }
+
+        .product_details li{
+
+            list-style-type:disc;
+            color:#6c6a74;
+        }
+    </style>
+
     <!--
     <link rel="stylesheet" type="text/css" href="{{asset('Frontend/styles/bootstrap4/bootstrap.min.css')}}"> -->
     <link href="{{asset('Frontend/plugins/font-awesome-4.7.0/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
@@ -8,11 +25,25 @@
     <link rel="stylesheet" type="text/css" href="{{asset('Frontend/plugins/OwlCarousel2-2.2.1/animate.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('Frontend/styles/product.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('Frontend/styles/product_responsive.css')}}">
-   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" id="bootstrap-css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" id="bootstrap-css">
+
+
+    <!-- test fotoroma cdn -->
+
     <!-- jQuery 1.8 or later, 33 KB -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
     <!-- Fotorama from CDNJS, 19 KB -->
-   <!-- <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> -->
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
+
+
+    <!-- fotoroma cdn ends here-->
+
+
+
+
     <link rel="stylesheet" href="{{asset('Frontend/fotorama-4.6.4/fotoroma.css')}}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     <!--fotoroma cdn ends here-->
@@ -20,7 +51,7 @@
 @section('mainContent')
     <!-- Home -->
     <br><br>
-<!--
+    <!--
     <div class="home" style="height:300px;">
         <div class="home_container" >
             <div class="home_background" style="background-image:url(http://localhost/teutonsDev/public/Frontend/images/bg.png)"></div>
@@ -49,21 +80,20 @@
                 <!-- Product Image -->
                 <div class=" col-lg-6">
 
-                <!--
-                    <div class="fotorama" data-transition="slide" data-nav="thumbs" data-allowfullscreen="native"               data-autoplay="3000" data-keyboard='{"space": true, "home": true, "end": true, "up": true, "down": true}'>
-                               
+
+                    <div class="fotorama" data-transition="slide" data-nav="thumbs" data-allowfullscreen="native"data-autoplay="3000" data-keyboard='{"space": true, "home": true, "end": true, "up": true, "down": true}'>
 
                         @if(count($product->product_image))
                             @foreach($product->product_image as $image)
-                                       <a href="{{asset($product->featured_image)}}"><img src="{{asset($product->featured_image)}}" width="144" height="96"></a>
+                                <a href="{{asset($image->file_path)}}"><img src="{{asset($image->file_path)}}" width="144" height="96"></a>
 
                             @endforeach
                         @endif
 
 
-                             </div>-->
+                    </div>
 
-                    <div class="details_image">
+                <!-- <div class="details_image">
                         <div class="details_image_large">
                             <img src="{{asset($product->featured_image)}}" id="currentImage"  alt="">
                                 @if($product->is_new==1) <div class="product_extra product_new"><a href="#">New</a></div> @endif</div>
@@ -74,14 +104,14 @@
 
                             </div>
                             @if(count($product->product_image))
-                                @foreach($product->product_image as $image)
-                                    <div class="product-section-thumbnail" data-image="{{URL::asset($image->file_path)}}" style="background-color: transparent;">
+                    @foreach($product->product_image as $image)
+                        <div class="product-section-thumbnail" data-image="{{URL::asset($image->file_path)}}" style="background-color: transparent;">
                                         <img src="{{URL::asset($image->file_path)}}"  width="100%"  alt="" >
                                     </div>
                                 @endforeach
-                            @endif
-                        </div>
+                @endif
                     </div>
+                </div> -->
 
 
 
@@ -121,9 +151,8 @@
                                     <div class="col-md-12">
                                         <nav>
                                             <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                                                <a style="text-decoration:none;" class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Description</a>
-                                                <a style="text-decoration:none;" class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Specification</a>
-
+                                                <a style="text-decoration:none;" class=" col-sm-2 nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Description</a>
+                                                <a style="text-decoration:none;" class=" col-sm-2 nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Specification</a>
                                             </div>
                                         </nav>
                                         <div class="tab-content" id="nav-tabContent">
@@ -186,42 +215,42 @@
                     <div class="product_grid">
                     @foreach($relatedProducts as $product)
                         @if($product->id != $flag)
-                        <!-- Product -->
-                        <div class="product pbx">
-                            <div class="product_image"><a style="text-decoration:none;" href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt=""></a></div>
-                            <!--div class="product_extra product_new"><a style="text-decoration:none;" href="#">New</a></div-->
-                            <div class="product_content">
-                                <div class="product_title text-center"><a style="text-decoration:none;" href="{{route('details',$product->id)}}">{{$product->name}}</a></div>
-                            </div>
-                        </div>
-                        @endif
+                            <!-- Product -->
+                                <div class="product pbx">
+                                    <div class="product_image"><a style="text-decoration:none;" href="{{route('details',$product->id)}}"><img src="{{asset($product->featured_image)}}" alt=""></a></div>
+                                    <!--div class="product_extra product_new"><a style="text-decoration:none;" href="#">New</a></div-->
+                                    <div class="product_content">
+                                        <div class="product_title text-center"><a style="text-decoration:none;" href="{{route('details',$product->id)}}">{{$product->name}}</a></div>
+                                    </div>
+                                </div>
+                            @endif
                         @endforeach
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    @section('cjs')
-        <script src="{{asset('Frontend/js/product.js')}}"></script>
-        <script>
-            (function(){
-                const currentImage = document.querySelector('#currentImage');
-                const images = document.querySelectorAll('.product-section-thumbnail');
-                images.forEach((element) => element.addEventListener('click', thumbnailClick));
-                function thumbnailClick(e) {
+@section('cjs')
+    <script src="{{asset('Frontend/js/product.js')}}"></script>
+    <script>
+        (function(){
+            const currentImage = document.querySelector('#currentImage');
+            const images = document.querySelectorAll('.product-section-thumbnail');
+            images.forEach((element) => element.addEventListener('click', thumbnailClick));
+            function thumbnailClick(e) {
 
-                    currentImage.src = this.querySelector('img').src;
+                currentImage.src = this.querySelector('img').src;
 
-                    images.forEach((element) => element.classList.remove('selected'));
-                    this.classList.add('selected');
+                images.forEach((element) => element.classList.remove('selected'));
+                this.classList.add('selected');
 
 
-                }
+            }
 
-            })();
-        </script>
-        <script src="{{asset('Frontend/js/jquery.fancybox.min.js')}}"></script>
-    @endsection
+        })();
+    </script>
+    <script src="{{asset('Frontend/js/jquery.fancybox.min.js')}}"></script>
+@endsection
 @endsection
 
 

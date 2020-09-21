@@ -148,7 +148,7 @@
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#Settings"
                        aria-expanded="false" aria-controls="Settings">
                         <i class="mdi mdi-settings"></i>
-                        <span class="nav-text">Settings</span> <b class="caret"></b>
+                        <span class="nav-text">Slider</span> <b class="caret"></b>
                     </a>
                     <ul  class="collapse"  id="Settings"
                          data-parent="#sidebar-menu">
@@ -157,13 +157,13 @@
 
 
                             <li >
-                                <a class="sidenav-item-link" href="#">
-                                    <span class="nav-text">Add Banner</span>
+                                <a class="sidenav-item-link" href="{{route('slider.index')}}">
+                                    <span class="nav-text">Slider list</span>
                                 </a>
                             </li>
                             <li >
-                                <a class="sidenav-item-link" href="#">
-                                    <span class="nav-text">Add Advertise</span>
+                                <a class="sidenav-item-link" href="{{route('slider.create')}}">
+                                    <span class="nav-text">Create Slider</span>
                                 </a>
                             </li>
 

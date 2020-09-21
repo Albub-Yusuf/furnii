@@ -54,6 +54,9 @@ Route::middleware('auth')->group(function(){
     Route::delete('advertise/{id}/delete','AdvertiseController@delete')->name('advertise.delete');
 
 
+    Route::resource('slider','SliderController');
+
+
 
 
 

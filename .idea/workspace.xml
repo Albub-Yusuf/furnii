@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="926319ea-4a9a-4005-9687-52d690a7a7c1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/contactUs.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/slider/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/slider/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontendController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontendController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/frontend/_head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/frontend/_head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/frontend/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/frontend/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/contactUs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/contactUs.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/product/productDetails.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/product/productDetails.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/backend/_mainNav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/backend/_mainNav.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -410,7 +411,12 @@
       <workItem from="1593780054947" duration="2030000" />
       <workItem from="1594375315381" duration="1778000" />
       <workItem from="1594377123350" duration="1108000" />
-      <workItem from="1594379360482" duration="1224000" />
+      <workItem from="1594379360482" duration="1747000" />
+      <workItem from="1594437253298" duration="218000" />
+      <workItem from="1594470431544" duration="2073000" />
+      <workItem from="1594473002043" duration="1410000" />
+      <workItem from="1599191582819" duration="57000" />
+      <workItem from="1600675885310" duration="1247000" />
     </task>
     <servers />
   </component>
@@ -422,27 +428,16 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="542" y="222" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1742142422131" />
-    <state x="499" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1589267099591">
+    <state x="604" y="344" key="NewPhpFileDialog" timestamp="1594473739929">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1589267099591" />
-    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1586088663081">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586088663081" />
-    <state x="604" y="344" key="NewPhpFileDialog" timestamp="1594379583465">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
+    <state x="604" y="344" key="NewPhpFileDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1594473739929" />
     <state x="604" y="344" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1594379583465" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1594379360818">
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1600675885148">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1593780055747" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1594379360818" />
-    <state x="427" y="105" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586067306736">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="427" y="105" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1586067306736" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1594473002370" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1600675885148" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1592126053354">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
